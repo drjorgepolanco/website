@@ -1,0 +1,3639 @@
+/*\
+ *
+ *
+ * Ramon v1.0 | NO LICENSE - FREE | github.com/drjorgepolanco
+ * August 28, 2015
+ *
+ * 1. Defaults
+ * 2. Helpers
+ *    a. Positioning 
+ *    b. Visibility
+ *    c. Padding
+ *    d. Margin
+ *    d. Grid
+ * 3. Typography
+ * 4. Structure: Inspired in Zurb Foundation's Grid
+ * 5. Visibility
+ *
+ *
+\*/
+
+
+/* ========================================================================== */
+/* 1. DEFAULTS */
+/* =========== */
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0; 
+}
+
+html { 
+    -moz-box-sizing: border-box; 
+       box-sizing: border-box; 
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: inherit;
+       box-sizing: inherit; 
+}
+
+/* Smooth fonts and transitions */
+* {
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    transition: all 0.5s linear;
+}
+
+body {
+    background-color: #E9E9E9;
+    cursor: auto;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+
+body.hide-overflow { overflow: hidden; }
+
+
+a       { text-decoration: none; }
+a:hover { cursor: pointer;       }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+
+select { width: 100%; }
+
+
+/* ------------ */
+/* Texty Inputs */
+/* ------------ */
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+textarea {
+    outline: none;
+    width: 100%;
+    border: 0;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #999;
+    transition: all 0.30s ease-in-out;
+    border-radius: 4px;
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email] { height: 40px; }
+
+input[type=text]:focus,
+input[type=url]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=color]:focus,
+input[type=email]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(204, 204, 204, 1);
+    border:   1px solid rgba(204, 204, 204, 1);
+}
+
+textarea {
+    height: auto;
+    min-height: 64px; 
+}
+
+
+/* ========================================================================== */
+/* 2. HELPERS */
+/* ========== */
+
+/* -------------- */
+/* a. Positioning */
+/* -------------- */
+
+.center-text { text-align: center; }
+
+.center-img {
+    margin: 0 auto;
+    display: block;
+}
+
+.center-pos-vertical {
+    position: absolute !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.left      { float: left  !important; }
+.left-pos  { left: 0;                 }
+.right     { float: right !important; }
+.right-pos { right: 0;                }
+
+
+/* ------------- */
+/* b. Visibility */
+/* ------------- */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table; 
+}
+
+.clearfix:after { clear: both;        }
+.hide           { display: none;      }
+.invisible      { visibility: hidden; }
+
+.antialiased {
+    /* make the copy very thin and smooth */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+.replace-img {
+    /* Replaces text with a background image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+
+/* ---------- */
+/* c. Padding */
+/* ---------- */
+
+.padding-0 { padding: 0 !important; }
+
+.padding-0-horizontal {
+    padding-right: 0    !important;
+    padding-left: 0     !important; 
+}
+
+.padding-0-vertical {
+    padding-top: 0      !important;
+    padding-bottom: 0   !important; 
+}
+
+.padding-0-top    { padding-top: 0    !important; }
+.padding-0-bottom { padding-bottom: 0 !important; }
+.padding-0-left   { padding-left: 0   !important; }
+.padding-0-right  { padding-right: 0  !important; }
+
+
+/* --------- */
+/* d. Margin */
+/* --------- */
+
+.margin-0 { margin: 0 !important; }
+
+.margin-0-horizontal {
+    margin-right: 0   !important;
+    margin-left: 0    !important; 
+}
+
+.margin-0-vertical {
+    margin-top: 0     !important;
+    margin-bottom: 0  !important; 
+}
+
+
+/* ========================================================================== */
+/* 3. TYPOGRAPHY */
+/* ============= */
+
+html {
+    font-size: 62.5%; 
+}
+
+@media only screen and (min-width: 600px) {
+
+    html { font-size: 71.875%; } 
+}
+
+@media only screen and (min-width: 1366px) {
+
+    html { font-size: 81.25%; } 
+}
+
+body {
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1.6rem;
+    background-color: #E9E9E9;
+    color: #444444;
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal; 
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+h1 {
+    font-size: 32px;
+    font-size: 3.2rem; 
+}
+
+h2 {
+    font-size: 28px;
+    font-size: 2.8rem; 
+}
+
+h3 {
+    font-size: 24px;
+    font-size: 2.4rem; 
+}
+
+h4 {
+    font-size: 20px;
+    font-size: 2rem; 
+}
+
+h5 {
+    font-size: 16px;
+    font-size: 1.6rem; 
+}
+
+h6 {
+    font-size: 12px;
+    font-size: 1.2rem; 
+}
+
+p {
+    font-weight: 300;
+    font-size: 16px;
+    font-size: 1.6rem; 
+}
+
+
+/* ========================================================================== */
+/* 4. STRUCTURE */
+/* ============ */
+
+.row:before, 
+.row:after, 
+.row .row:before, 
+.row .row:after, 
+.row .row.collapse:before, 
+.row .row.collapse:after {
+    content: " ";
+    display: table; 
+}
+
+.column, .columns {
+    padding-left: 16px;
+    padding-right: 16px;
+    float: left; 
+}
+
+.column + .column:last-child, 
+.columns + .column:last-child { float: right; }
+
+.column + .column.end, 
+.columns + .column.end { float: left; }
+
+.column + .columns:last-child, 
+.columns + .columns:last-child { float: right; }
+
+.column + .columns.end, 
+.columns + .columns.end { float: left; }
+
+.row {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+.row:after { clear: both; }
+
+.row.collapse > .column, 
+.row.collapse > .columns {
+    padding-right: 0;
+    padding-left: 0; 
+}
+
+.row.collapse .row {
+    margin-right: 0;
+    margin-left: 0; 
+}
+
+.row .row {
+    max-width: none;
+    width: auto;
+    margin: 0 -16px; 
+}
+
+.row .row:after { clear: both; }
+
+.row .row.collapse {
+    max-width: none;
+    width: auto;
+    margin: 0 auto; 
+}
+
+.row .row.collapse:after { clear: both; }
+
+
+/* ============== */
+/* Full width row */
+/* ============== */
+
+.row-full:before, 
+.row-full:after {
+    content: " ";
+    display: table; 
+}
+
+.row-full {
+    width: 100%;
+    margin: 0;
+    clear: both;
+}
+
+.row-full:after { clear: both; }
+
+
+/* =============== */
+/* 960px width row */
+/* =============== */
+
+.row-960:before, 
+.row-960:after {
+    content: " ";
+    display: table; 
+}
+
+.row-960 {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row-960:after { clear: both; }
+
+
+/* =========================== */
+/* .phone - 0px to 599px width */
+/* =========================== */
+
+@media only screen {
+
+    .phone-push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .phone-pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .phone-push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .phone-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .phone-push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .phone-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .phone-push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .phone-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .phone-push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .phone-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .phone-push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .phone-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .phone-push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .phone-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .phone-push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .phone-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .phone-push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .phone-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .phone-push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .phone-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .phone-push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .phone-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .phone-push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .phone-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    }
+
+    .column,
+    .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+        float: left; 
+    }
+
+    .phone-1  { width: 8.33333%;  }
+    .phone-2  { width: 16.66667%; }
+    .phone-3  { width: 25%;       }
+    .phone-4  { width: 33.33333%; }
+    .phone-5  { width: 41.66667%; }
+    .phone-6  { width: 50%;       }
+    .phone-7  { width: 58.33333%; }
+    .phone-8  { width: 66.66667%; }
+    .phone-9  { width: 75%;       }
+    .phone-10 { width: 83.33333%; }
+    .phone-11 { width: 91.66667%; }
+    .phone-12 { width: 100%;      }
+
+    .phone-offset-0  { margin-left: 0         !important; }
+    .phone-offset-1  { margin-left: 8.33333%  !important; }
+    .phone-offset-2  { margin-left: 16.66667% !important; }
+    .phone-offset-3  { margin-left: 25%       !important; }
+    .phone-offset-4  { margin-left: 33.33333% !important; }
+    .phone-offset-5  { margin-left: 41.66667% !important; }
+    .phone-offset-6  { margin-left: 50%       !important; }
+    .phone-offset-7  { margin-left: 58.33333% !important; }
+    .phone-offset-8  { margin-left: 66.66667% !important; }
+    .phone-offset-9  { margin-left: 75%       !important; }
+    .phone-offset-10 { margin-left: 83.33333% !important; }
+    .phone-offset-11 { margin-left: 91.66667% !important; }
+
+    .phone-reset-order {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+        left: auto;
+        right: auto; 
+    }
+
+    .column.phone-centered,
+    .columns.phone-centered {
+        margin-right: 0;
+        margin-left: 0;
+        float: none; 
+    }
+
+    .column.phone-uncentered,
+    .columns.phone-uncentered {
+        margin-right: 0;
+        margin-left: 0;
+        float: left; 
+    }
+
+    .column.phone-centered:last-child,
+    .columns.phone-centered:last-child   { float: none;  }
+
+    .column.phone-uncentered:last-child,
+    .columns.phone-uncentered:last-child { float: left;  }
+
+    .column.phone-uncentered.opposite,
+    .columns.phone-uncentered.opposite   { float: right; }
+
+    .row.phone-collapse > .column,
+    .row.phone-collapse > .columns {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+
+    .row.phone-collapse .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+
+    .row.phone-uncollapse > .column,
+    .row.phone-uncollapse > .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        float: left; 
+    } 
+}
+
+
+/* =============================== */
+/* .tablet - 600px to 1023px width */
+/* =============================== */
+
+@media only screen and (min-width: 600px) {
+
+    .tablet-push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .tablet-pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .tablet-push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .tablet-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .tablet-push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .tablet-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .tablet-push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .tablet-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .tablet-push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .tablet-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .tablet-push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .tablet-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .tablet-push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .tablet-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .tablet-push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .tablet-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .tablet-push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .tablet-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .tablet-push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .tablet-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .tablet-push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .tablet-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .tablet-push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .tablet-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    }
+
+    .column,
+    .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+        float: left; 
+    }
+
+    .tablet-1  { width: 8.33333%;  }
+    .tablet-2  { width: 16.66667%; }
+    .tablet-3  { width: 25%;       }
+    .tablet-4  { width: 33.33333%; }
+    .tablet-5  { width: 41.66667%; }
+    .tablet-6  { width: 50%;       }
+    .tablet-7  { width: 58.33333%; }
+    .tablet-8  { width: 66.66667%; }
+    .tablet-9  { width: 75%;       }
+    .tablet-10 { width: 83.33333%; }
+    .tablet-11 { width: 91.66667%; }
+    .tablet-12 { width: 100%;      }
+
+    .tablet-offset-0  { margin-left: 0         !important; }
+    .tablet-offset-1  { margin-left: 8.33333%  !important; }
+    .tablet-offset-2  { margin-left: 16.66667% !important; }
+    .tablet-offset-3  { margin-left: 25%       !important; }
+    .tablet-offset-4  { margin-left: 33.33333% !important; }
+    .tablet-offset-5  { margin-left: 41.66667% !important; }
+    .tablet-offset-6  { margin-left: 50%       !important; }
+    .tablet-offset-7  { margin-left: 58.33333% !important; }
+    .tablet-offset-8  { margin-left: 66.66667% !important; }
+    .tablet-offset-9  { margin-left: 75%       !important; }
+    .tablet-offset-10 { margin-left: 83.33333% !important; }
+    .tablet-offset-11 { margin-left: 91.66667% !important; }
+
+    .tablet-reset-order {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+        left: auto;
+        right: auto;
+    }
+
+    .column.tablet-centered,
+    .columns.tablet-centered {
+        margin-right: 0;
+        margin-left: 0;
+        float: none; 
+    }
+
+    .column.tablet-uncentered,
+    .columns.tablet-uncentered {
+        margin-right: 0;
+        margin-left: 0;
+        float: left; 
+    }
+
+    .column.tablet-centered:last-child,
+    .columns.tablet-centered:last-child   { float: none; }
+
+    .column.tablet-uncentered:last-child,
+    .columns.tablet-uncentered:last-child { float: left; }
+
+    .column.tablet-uncentered.opposite,
+    .columns.tablet-uncentered.opposite   { float: right; }
+
+    .row.tablet-collapse > .column,
+    .row.tablet-collapse > .columns {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+
+    .row.tablet-collapse .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+
+    .row.tablet-uncollapse > .column,
+    .row.tablet-uncollapse > .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        float: left; 
+    } 
+}
+
+
+/* ================================ */
+/* .laptop - 1024px to 1439px width */
+/* ================================ */
+
+@media only screen and (min-width: 1024px) {
+
+    .laptop-push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .laptop-pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .laptop-push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .laptop-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .laptop-push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .laptop-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .laptop-push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .laptop-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .laptop-push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .laptop-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .laptop-push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .laptop-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .laptop-push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .laptop-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .laptop-push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .laptop-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .laptop-push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .laptop-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .laptop-push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .laptop-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .laptop-push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .laptop-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .laptop-push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .laptop-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    }
+
+    .column,
+    .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+        float: left; 
+    }
+
+    .laptop-1  { width: 8.33333%;  }
+    .laptop-2  { width: 16.66667%; }
+    .laptop-3  { width: 25%;       }
+    .laptop-4  { width: 33.33333%; }
+    .laptop-5  { width: 41.66667%; }
+    .laptop-6  { width: 50%;       }
+    .laptop-7  { width: 58.33333%; }
+    .laptop-8  { width: 66.66667%; }
+    .laptop-9  { width: 75%;       }
+    .laptop-10 { width: 83.33333%; }
+    .laptop-11 { width: 91.66667%; }
+    .laptop-12 { width: 100%;      }
+
+    .laptop-offset-0  { margin-left: 0         !important; }
+    .laptop-offset-1  { margin-left: 8.33333%  !important; }
+    .laptop-offset-2  { margin-left: 16.66667% !important; }
+    .laptop-offset-3  { margin-left: 25%       !important; }
+    .laptop-offset-4  { margin-left: 33.33333% !important; }
+    .laptop-offset-5  { margin-left: 41.66667% !important; }
+    .laptop-offset-6  { margin-left: 50%       !important; }
+    .laptop-offset-7  { margin-left: 58.33333% !important; }
+    .laptop-offset-8  { margin-left: 66.66667% !important; }
+    .laptop-offset-9  { margin-left: 75%       !important; }
+    .laptop-offset-10 { margin-left: 83.33333% !important; }
+    .laptop-offset-11 { margin-left: 91.66667% !important; }
+
+    .laptop-reset-order {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+        left: auto;
+        right: auto; 
+    }
+
+    .column.laptop-centered,
+    .columns.laptop-centered {
+        margin-right: 0;
+        margin-left: 0;
+        float: none; 
+    }
+
+    .column.laptop-uncentered,
+    .columns.laptop-uncentered {
+        margin-right: 0;
+        margin-left: 0;
+        float: left; 
+    }
+
+    .column.laptop-centered:last-child,
+    .columns.laptop-centered:last-child   { float: none; }
+
+    .column.laptop-uncentered:last-child,
+    .columns.laptop-uncentered:last-child { float: left; }
+
+    .column.laptop-uncentered.opposite,
+    .columns.laptop-uncentered.opposite   { float: right; }
+
+    .row.laptop-collapse > .column,
+    .row.laptop-collapse > .columns {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+
+    .row.laptop-collapse .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+
+    .row.laptop-uncollapse > .column,
+    .row.laptop-uncollapse > .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        float: left; 
+    }
+
+    .push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    } 
+}
+
+
+/* ================================= */
+/* .desktop - 1440px to 1919px width */
+/* ================================= */
+
+@media only screen and (min-width: 1440px) {
+
+    .desktop-push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .desktop-pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .desktop-push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .desktop-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .desktop-push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .desktop-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .desktop-push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .desktop-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .desktop-push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .desktop-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .desktop-push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .desktop-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .desktop-push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .desktop-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .desktop-push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .desktop-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .desktop-push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .desktop-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .desktop-push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .desktop-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .desktop-push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .desktop-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .desktop-push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .desktop-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    }
+
+    .column,
+    .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+        float: left; 
+    }
+
+    .desktop-1  { width: 8.33333%;  }
+    .desktop-2  { width: 16.66667%; }
+    .desktop-3  { width: 25%;       }
+    .desktop-4  { width: 33.33333%; }
+    .desktop-5  { width: 41.66667%; }
+    .desktop-6  { width: 50%;       }
+    .desktop-7  { width: 58.33333%; }
+    .desktop-8  { width: 66.66667%; }
+    .desktop-9  { width: 75%;       }
+    .desktop-10 { width: 83.33333%; }
+    .desktop-11 { width: 91.66667%; }
+    .desktop-12 { width: 100%;      }
+
+    .desktop-offset-0  { margin-left: 0         !important; }
+    .desktop-offset-1  { margin-left: 8.33333%  !important; }
+    .desktop-offset-2  { margin-left: 16.66667% !important; }
+    .desktop-offset-3  { margin-left: 25%       !important; }
+    .desktop-offset-4  { margin-left: 33.33333% !important; }
+    .desktop-offset-5  { margin-left: 41.66667% !important; }
+    .desktop-offset-6  { margin-left: 50%       !important; }
+    .desktop-offset-7  { margin-left: 58.33333% !important; }
+    .desktop-offset-8  { margin-left: 66.66667% !important; }
+    .desktop-offset-9  { margin-left: 75%       !important; }
+    .desktop-offset-10 { margin-left: 83.33333% !important; }
+    .desktop-offset-11 { margin-left: 91.66667% !important; }
+
+    .desktop-reset-order {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+        left: auto;
+        right: auto; 
+    }
+
+    .column.desktop-centered,
+    .columns.desktop-centered {
+        margin-right: 0;
+        margin-left: 0;
+        float: none; 
+    }
+
+    .column.desktop-uncentered,
+    .columns.desktop-uncentered {
+        margin-right: 0;
+        margin-left: 0;
+        float: left; 
+    }
+
+    .column.desktop-centered:last-child,
+    .columns.desktop-centered:last-child   { float: none;  }
+
+    .column.desktop-uncentered:last-child,
+    .columns.desktop-uncentered:last-child { float: left;  }
+
+    .column.desktop-uncentered.opposite,
+    .columns.desktop-uncentered.opposite   { float: right; }
+
+    .row.desktop-collapse > .column,
+    .row.desktop-collapse > .columns {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+
+    .row.desktop-collapse .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+
+    .row.desktop-uncollapse > .column,
+    .row.desktop-uncollapse > .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        float: left; 
+    }
+
+    .push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    } 
+}
+
+
+/* ============================ */
+/* .hd - 1920px to 2559px width */
+/* ============================ */
+
+@media only screen and (min-width: 1920px) {
+
+    .hd-push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .hd-pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .hd-push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .hd-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .hd-push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .hd-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .hd-push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .hd-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .hd-push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .hd-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .hd-push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .hd-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .hd-push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .hd-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .hd-push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .hd-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .hd-push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .hd-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .hd-push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .hd-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .hd-push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .hd-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .hd-push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .hd-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    }
+
+    .column,
+    .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+        float: left; 
+    }
+
+    .hd-1  { width: 8.33333%;  }
+    .hd-2  { width: 16.66667%; }
+    .hd-3  { width: 25%;       }
+    .hd-4  { width: 33.33333%; }
+    .hd-5  { width: 41.66667%; }
+    .hd-6  { width: 50%;       }
+    .hd-7  { width: 58.33333%; }
+    .hd-8  { width: 66.66667%; }
+    .hd-9  { width: 75%;       }
+    .hd-10 { width: 83.33333%; }
+    .hd-11 { width: 91.66667%; }
+    .hd-12 { width: 100%;      }
+
+    .hd-offset-0  { margin-left: 0         !important; }
+    .hd-offset-1  { margin-left: 8.33333%  !important; }
+    .hd-offset-2  { margin-left: 16.66667% !important; }
+    .hd-offset-3  { margin-left: 25%       !important; }
+    .hd-offset-4  { margin-left: 33.33333% !important; }
+    .hd-offset-5  { margin-left: 41.66667% !important; }
+    .hd-offset-6  { margin-left: 50%       !important; }
+    .hd-offset-7  { margin-left: 58.33333% !important; }
+    .hd-offset-8  { margin-left: 66.66667% !important; }
+    .hd-offset-9  { margin-left: 75%       !important; }
+    .hd-offset-10 { margin-left: 83.33333% !important; }
+    .hd-offset-11 { margin-left: 91.66667% !important; }
+
+    .hd-reset-order {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+        left: auto;
+        right: auto; 
+    }
+
+    .column.hd-centered,
+    .columns.hd-centered {
+        margin-right: 0;
+        margin-left: 0;
+        float: none; 
+    }
+
+    .column.hd-uncentered,
+    .columns.hd-uncentered {
+        margin-right: 0;
+        margin-left: 0;
+        float: left; 
+    }
+
+    .column.hd-centered:last-child,
+    .columns.hd-centered:last-child   { float: none;  }
+
+    .column.hd-uncentered:last-child,
+    .columns.hd-uncentered:last-child { float: left;  }
+
+    .column.hd-uncentered.opposite,
+    .columns.hd-uncentered.opposite   { float: right; }
+
+    .row.hd-collapse > .column,
+    .row.hd-collapse > .columns {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+
+    .row.hd-collapse .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+
+    .row.hd-uncollapse > .column,
+    .row.hd-uncollapse > .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        float: left; 
+    }
+
+    .push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    } 
+}
+
+
+/* ============================== */
+/* .ultra-hd - 2560px to infinite */
+/* ============================== */
+
+@media only screen and (min-width: 2560px) {
+  
+    .ultra-hd-push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .ultra-hd-pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .ultra-hd-push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .ultra-hd-pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .ultra-hd-pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .ultra-hd-pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .ultra-hd-pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .ultra-hd-pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .ultra-hd-pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .ultra-hd-pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .ultra-hd-pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .ultra-hd-pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .ultra-hd-pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .ultra-hd-push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .ultra-hd-pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    }
+
+    .column,
+    .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        position: relative;
+        float: left; 
+    }
+
+    .ultra-hd-1  { width: 8.33333%;  }
+    .ultra-hd-2  { width: 16.66667%; }
+    .ultra-hd-3  { width: 25%;       }
+    .ultra-hd-4  { width: 33.33333%; }
+    .ultra-hd-5  { width: 41.66667%; }
+    .ultra-hd-6  { width: 50%;       }
+    .ultra-hd-7  { width: 58.33333%; }
+    .ultra-hd-8  { width: 66.66667%; }
+    .ultra-hd-9  { width: 75%;       }
+    .ultra-hd-10 { width: 83.33333%; }
+    .ultra-hd-11 { width: 91.66667%; }
+    .ultra-hd-12 { width: 100%;      }
+
+    .ultra-hd-offset-0  { margin-left: 0         !important; }
+    .ultra-hd-offset-1  { margin-left: 8.33333%  !important; }
+    .ultra-hd-offset-2  { margin-left: 16.66667% !important; }
+    .ultra-hd-offset-3  { margin-left: 25%       !important; }
+    .ultra-hd-offset-4  { margin-left: 33.33333% !important; }
+    .ultra-hd-offset-5  { margin-left: 41.66667% !important; }
+    .ultra-hd-offset-6  { margin-left: 50%       !important; }
+    .ultra-hd-offset-7  { margin-left: 58.33333% !important; }
+    .ultra-hd-offset-8  { margin-left: 66.66667% !important; }
+    .ultra-hd-offset-9  { margin-left: 75%       !important; }
+    .ultra-hd-offset-10 { margin-left: 83.33333% !important; }
+    .ultra-hd-offset-11 { margin-left: 91.66667% !important; }
+
+    .ultra-hd-reset-order {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+        left: auto;
+        right: auto; 
+    }
+
+    .column.ultra-hd-centered,
+    .columns.ultra-hd-centered {
+        margin-right: 0;
+        margin-left: 0;
+        float: none; 
+    }
+
+    .column.ultra-hd-uncentered,
+    .columns.ultra-hd-uncentered {
+        margin-right: 0;
+        margin-left: 0;
+        float: left; 
+    }
+
+    .column.ultra-hd-centered:last-child,
+    .columns.ultra-hd-centered:last-child   { float: none;  }
+
+    .column.ultra-hd-uncentered:last-child,
+    .columns.ultra-hd-uncentered:last-child { float: left;  }
+
+    .column.ultra-hd-uncentered.opposite,
+    .columns.ultra-hd-uncentered.opposite   { float: right; }
+
+    .row.ultra-hd-collapse > .column,
+    .row.ultra-hd-collapse > .columns {
+        padding-right: 0;
+        padding-left: 0; 
+    }
+
+    .row.ultra-hd-collapse .row {
+        margin-right: 0;
+        margin-left: 0; 
+    }
+
+    .row.ultra-hd-uncollapse > .column,
+    .row.ultra-hd-uncollapse > .columns {
+        padding-right: 16px;
+        padding-left: 16px;
+        float: left; 
+    }
+
+    .push-0 {
+        position: relative;
+        right: auto;
+        left: 0; 
+    }
+
+    .pull-0 {
+        position: relative;
+        right: 0;
+        left: auto; 
+    }
+
+    .push-1 {
+        position: relative;
+        right: auto;
+        left: 8.33333%; 
+    }
+
+    .pull-1 {
+        position: relative;
+        right: 8.33333%;
+        left: auto; 
+    }
+
+    .push-2 {
+        position: relative;
+        right: auto;
+        left: 16.66667%; 
+    }
+
+    .pull-2 {
+        position: relative;
+        right: 16.66667%;
+        left: auto; 
+    }
+
+    .push-3 {
+        position: relative;
+        right: auto;
+        left: 25%; 
+    }
+
+    .pull-3 {
+        position: relative;
+        right: 25%;
+        left: auto; 
+    }
+
+    .push-4 {
+        position: relative;
+        right: auto;
+        left: 33.33333%; 
+    }
+
+    .pull-4 {
+        position: relative;
+        right: 33.33333%;
+        left: auto; 
+    }
+
+    .push-5 {
+        position: relative;
+        right: auto;
+        left: 41.66667%; 
+    }
+
+    .pull-5 {
+        position: relative;
+        right: 41.66667%;
+        left: auto; 
+    }
+
+    .push-6 {
+        position: relative;
+        right: auto;
+        left: 50%; 
+    }
+
+    .pull-6 {
+        position: relative;
+        right: 50%;
+        left: auto; 
+    }
+
+    .push-7 {
+        position: relative;
+        right: auto;
+        left: 58.33333%; 
+    }
+
+    .pull-7 {
+        position: relative;
+        right: 58.33333%;
+        left: auto; 
+    }
+
+    .push-8 {
+        position: relative;
+        right: auto;
+        left: 66.66667%; 
+    }
+
+    .pull-8 {
+        position: relative;
+        right: 66.66667%;
+        left: auto; 
+    }
+
+    .push-9 {
+        position: relative;
+        right: auto;
+        left: 75%; 
+    }
+
+    .pull-9 {
+        position: relative;
+        right: 75%;
+        left: auto; 
+    }
+
+    .push-10 {
+        position: relative;
+        right: auto;
+        left: 83.33333%; 
+    }
+
+    .pull-10 {
+        position: relative;
+        right: 83.33333%;
+        left: auto; 
+    }
+
+    .push-11 {
+        position: relative;
+        right: auto;
+        left: 91.66667%; 
+    }
+
+    .pull-11 {
+        position: relative;
+        right: 91.66667%;
+        left: auto; 
+    } 
+}
+
+
+/* ========================================================================== */
+/* 5. VISIBILITY */
+/* ============= */
+
+@media only screen {
+
+    .show-for-phone-only,
+    .show-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .hide-for-tablet-only,
+    .hide-for-tablet-up,
+    .hide-for-tablet,
+    .show-for-tablet-down,
+    .hide-for-laptop-only,
+    .hide-for-laptop-up,
+    .hide-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down { display: inherit !important; }
+
+    .hide-for-phone-only,
+    .hide-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .show-for-tablet-only,
+    .show-for-tablet-up,
+    .show-for-tablet,
+    .hide-for-tablet-down,
+    .show-for-laptop-only,
+    .show-for-laptop-up,
+    .show-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down { display: none !important; }
+
+    .visible-for-phone-only,
+    .visible-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .hidden-for-tablet-only,
+    .hidden-for-tablet-up,
+    .hidden-for-tablet,
+    .visible-for-tablet-down,
+    .hidden-for-laptop-only,
+    .hidden-for-laptop-up,
+    .hidden-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down {
+        position: static !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        clip: auto; 
+    }
+
+    .hidden-for-phone-only,
+    .hidden-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .visible-for-tablet-only,
+    .visible-for-tablet-up,
+    .visible-for-tablet,
+    .hidden-for-tablet-down,
+    .visible-for-laptop-only,
+    .visible-for-laptop-up,
+    .visible-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px); 
+    }
+
+    table.show-for-phone-only,
+    table.show-for-phone-up,
+    table.show-for-phone,
+    table.show-for-phone-down,
+    table.hide-for-tablet-only,
+    table.hide-for-tablet-up,
+    table.hide-for-tablet,
+    table.show-for-tablet-down,
+    table.hide-for-laptop-only,
+    table.hide-for-laptop-up,
+    table.hide-for-laptop,
+    table.show-for-laptop-down,
+    table.hide-for-desktop-only,
+    table.hide-for-desktop-up,
+    table.hide-for-desktop,
+    table.show-for-desktop-down,
+    table.hide-for-hd-only,
+    table.hide-for-hd-up,
+    table.hide-for-hd,
+    table.show-for-hd-down { display: table !important; }
+
+    thead.show-for-phone-only,
+    thead.show-for-phone-up,
+    thead.show-for-phone,
+    thead.show-for-phone-down,
+    thead.hide-for-tablet-only,
+    thead.hide-for-tablet-up,
+    thead.hide-for-tablet,
+    thead.show-for-tablet-down,
+    thead.hide-for-laptop-only,
+    thead.hide-for-laptop-up,
+    thead.hide-for-laptop,
+    thead.show-for-laptop-down,
+    thead.hide-for-desktop-only,
+    thead.hide-for-desktop-up,
+    thead.hide-for-desktop,
+    thead.show-for-desktop-down,
+    thead.hide-for-hd-only,
+    thead.hide-for-hd-up,
+    thead.hide-for-hd,
+    thead.show-for-hd-down { display: table-header-group !important; }
+
+    tbody.show-for-phone-only,
+    tbody.show-for-phone-up,
+    tbody.show-for-phone,
+    tbody.show-for-phone-down,
+    tbody.hide-for-tablet-only,
+    tbody.hide-for-tablet-up,
+    tbody.hide-for-tablet,
+    tbody.show-for-tablet-down,
+    tbody.hide-for-laptop-only,
+    tbody.hide-for-laptop-up,
+    tbody.hide-for-laptop,
+    tbody.show-for-laptop-down,
+    tbody.hide-for-desktop-only,
+    tbody.hide-for-desktop-up,
+    tbody.hide-for-desktop,
+    tbody.show-for-desktop-down,
+    tbody.hide-for-hd-only,
+    tbody.hide-for-hd-up,
+    tbody.hide-for-hd,
+    tbody.show-for-hd-down { display: table-row-group !important; }
+
+    tr.show-for-phone-only,
+    tr.show-for-phone-up,
+    tr.show-for-phone,
+    tr.show-for-phone-down,
+    tr.hide-for-tablet-only,
+    tr.hide-for-tablet-up,
+    tr.hide-for-tablet,
+    tr.show-for-tablet-down,
+    tr.hide-for-laptop-only,
+    tr.hide-for-laptop-up,
+    tr.hide-for-laptop,
+    tr.show-for-laptop-down,
+    tr.hide-for-desktop-only,
+    tr.hide-for-desktop-up,
+    tr.hide-for-desktop,
+    tr.show-for-desktop-down,
+    tr.hide-for-hd-only,
+    tr.hide-for-hd-up,
+    tr.hide-for-hd,
+    tr.show-for-hd-down { display: table-row; }
+
+    th.show-for-phone-only,
+    th.show-for-phone-up,
+    th.show-for-phone,
+    th.show-for-phone-down,
+    th.hide-for-tablet-only,
+    th.hide-for-tablet-up,
+    th.hide-for-tablet,
+    th.show-for-tablet-down,
+    th.hide-for-laptop-only,
+    th.hide-for-laptop-up,
+    th.hide-for-laptop,
+    th.show-for-laptop-down,
+    th.hide-for-desktop-only,
+    th.hide-for-desktop-up,
+    th.hide-for-desktop,
+    th.show-for-desktop-down,
+    th.hide-for-hd-only,
+    th.hide-for-hd-up,
+    th.hide-for-hd,
+    th.show-for-hd-down { display: table-cell !important; }
+
+    td.show-for-phone-only,
+    td.show-for-phone-up,
+    td.show-for-phone,
+    td.show-for-phone-down,
+    td.hide-for-tablet-only,
+    td.hide-for-tablet-up,
+    td.hide-for-tablet,
+    td.show-for-tablet-down,
+    td.hide-for-laptop-only,
+    td.hide-for-laptop-up,
+    td.hide-for-laptop,
+    td.show-for-laptop-down,
+    td.hide-for-desktop-only,
+    td.hide-for-desktop-up,
+    td.hide-for-desktop,
+    td.show-for-desktop-down,
+    td.hide-for-hd-only,
+    td.hide-for-hd-up,
+    td.hide-for-hd,
+    td.show-for-hd-down { display: table-cell !important; } 
+}
+
+@media only screen and (min-width: 600px) {
+
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .show-for-tablet-only,
+    .show-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .hide-for-laptop-only,
+    .hide-for-laptop-up,
+    .hide-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down { display: inherit !important; }
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .hide-for-tablet-only,
+    .hide-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .show-for-laptop-only,
+    .show-for-laptop-up,
+    .show-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down { display: none !important; }
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .visible-for-tablet-only,
+    .visible-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .hidden-for-laptop-only,
+    .hidden-for-laptop-up,
+    .hidden-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down {
+        position: static !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        clip: auto; 
+    }
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .hidden-for-tablet-only,
+    .hidden-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .visible-for-laptop-only,
+    .visible-for-laptop-up,
+    .visible-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px); 
+    }
+
+    table.hide-for-phone-only,
+    table.show-for-phone-up,
+    table.hide-for-phone,
+    table.hide-for-phone-down,
+    table.show-for-tablet-only,
+    table.show-for-tablet-up,
+    table.show-for-tablet,
+    table.show-for-tablet-down,
+    table.hide-for-laptop-only,
+    table.hide-for-laptop-up,
+    table.hide-for-laptop,
+    table.show-for-laptop-down,
+    table.hide-for-desktop-only,
+    table.hide-for-desktop-up,
+    table.hide-for-desktop,
+    table.show-for-desktop-down,
+    table.hide-for-hd-only,
+    table.hide-for-hd-up,
+    table.hide-for-hd,
+    table.show-for-hd-down { display: table !important; }
+
+    thead.hide-for-phone-only,
+    thead.show-for-phone-up,
+    thead.hide-for-phone,
+    thead.hide-for-phone-down,
+    thead.show-for-tablet-only,
+    thead.show-for-tablet-up,
+    thead.show-for-tablet,
+    thead.show-for-tablet-down,
+    thead.hide-for-laptop-only,
+    thead.hide-for-laptop-up,
+    thead.hide-for-laptop,
+    thead.show-for-laptop-down,
+    thead.hide-for-desktop-only,
+    thead.hide-for-desktop-up,
+    thead.hide-for-desktop,
+    thead.show-for-desktop-down,
+    thead.hide-for-hd-only,
+    thead.hide-for-hd-up,
+    thead.hide-for-hd,
+    thead.show-for-hd-down { display: table-header-group !important; }
+
+    tbody.hide-for-phone-only,
+    tbody.show-for-phone-up,
+    tbody.hide-for-phone,
+    tbody.hide-for-phone-down,
+    tbody.show-for-tablet-only,
+    tbody.show-for-tablet-up,
+    tbody.show-for-tablet,
+    tbody.show-for-tablet-down,
+    tbody.hide-for-laptop-only,
+    tbody.hide-for-laptop-up,
+    tbody.hide-for-laptop,
+    tbody.show-for-laptop-down,
+    tbody.hide-for-desktop-only,
+    tbody.hide-for-desktop-up,
+    tbody.hide-for-desktop,
+    tbody.show-for-desktop-down,
+    tbody.hide-for-hd-only,
+    tbody.hide-for-hd-up,
+    tbody.hide-for-hd,
+    tbody.show-for-hd-down { display: table-row-group !important; }
+
+    tr.hide-for-phone-only,
+    tr.show-for-phone-up,
+    tr.hide-for-phone,
+    tr.hide-for-phone-down,
+    tr.show-for-tablet-only,
+    tr.show-for-tablet-up,
+    tr.show-for-tablet,
+    tr.show-for-tablet-down,
+    tr.hide-for-laptop-only,
+    tr.hide-for-laptop-up,
+    tr.hide-for-laptop,
+    tr.show-for-laptop-down,
+    tr.hide-for-desktop-only,
+    tr.hide-for-desktop-up,
+    tr.hide-for-desktop,
+    tr.show-for-desktop-down,
+    tr.hide-for-hd-only,
+    tr.hide-for-hd-up,
+    tr.hide-for-hd,
+    tr.show-for-hd-down { display: table-row; }
+
+    th.hide-for-phone-only,
+    th.show-for-phone-up,
+    th.hide-for-phone,
+    th.hide-for-phone-down,
+    th.show-for-tablet-only,
+    th.show-for-tablet-up,
+    th.show-for-tablet,
+    th.show-for-tablet-down,
+    th.hide-for-laptop-only,
+    th.hide-for-laptop-up,
+    th.hide-for-laptop,
+    th.show-for-laptop-down,
+    th.hide-for-desktop-only,
+    th.hide-for-desktop-up,
+    th.hide-for-desktop,
+    th.show-for-desktop-down,
+    th.hide-for-hd-only,
+    th.hide-for-hd-up,
+    th.hide-for-hd,
+    th.show-for-hd-down { display: table-cell !important; }
+
+    td.hide-for-phone-only,
+    td.show-for-phone-up,
+    td.hide-for-phone,
+    td.hide-for-phone-down,
+    td.show-for-tablet-only,
+    td.show-for-tablet-up,
+    td.show-for-tablet,
+    td.show-for-tablet-down,
+    td.hide-for-laptop-only,
+    td.hide-for-laptop-up,
+    td.hide-for-laptop,
+    td.show-for-laptop-down, 
+    td.hide-for-desktop-only, 
+    td.hide-for-desktop-up, 
+    td.hide-for-desktop, 
+    td.show-for-desktop-down, 
+    td.hide-for-hd-only, 
+    td.hide-for-hd-up, 
+    td.hide-for-hd, 
+    td.show-for-hd-down { display: table-cell !important; } 
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .hide-for-tablet-only,
+    .show-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .show-for-laptop-only,
+    .show-for-laptop-up,
+    .show-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down { display: inherit !important; }
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .show-for-tablet-only,
+    .hide-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .hide-for-laptop-only,
+    .hide-for-laptop-up,
+    .hide-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down { display: none !important; }
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .hidden-for-tablet-only,
+    .visible-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .visible-for-laptop-only,
+    .visible-for-laptop-up,
+    .visible-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down {
+        position: static !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        clip: auto; 
+    }
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .visible-for-tablet-only,
+    .hidden-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .hidden-for-laptop-only,
+    .hidden-for-laptop-up,
+    .hidden-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px); 
+    }
+
+    table.hide-for-phone-only,
+    table.show-for-phone-up,
+    table.hide-for-phone,
+    table.hide-for-phone-down,
+    table.hide-for-tablet-only,
+    table.show-for-tablet-up,
+    table.hide-for-tablet,
+    table.hide-for-tablet-down,
+    table.show-for-laptop-only,
+    table.show-for-laptop-up,
+    table.show-for-laptop,
+    table.show-for-laptop-down,
+    table.hide-for-desktop-only,
+    table.hide-for-desktop-up,
+    table.hide-for-desktop,
+    table.show-for-desktop-down,
+    table.hide-for-hd-only,
+    table.hide-for-hd-up,
+    table.hide-for-hd,
+    table.show-for-hd-down { display: table !important; }
+
+    thead.hide-for-phone-only,
+    thead.show-for-phone-up,
+    thead.hide-for-phone,
+    thead.hide-for-phone-down,
+    thead.hide-for-tablet-only,
+    thead.show-for-tablet-up,
+    thead.hide-for-tablet,
+    thead.hide-for-tablet-down,
+    thead.show-for-laptop-only,
+    thead.show-for-laptop-up,
+    thead.show-for-laptop,
+    thead.show-for-laptop-down,
+    thead.hide-for-desktop-only,
+    thead.hide-for-desktop-up,
+    thead.hide-for-desktop,
+    thead.show-for-desktop-down,
+    thead.hide-for-hd-only,
+    thead.hide-for-hd-up,
+    thead.hide-for-hd,
+    thead.show-for-hd-down { display: table-header-group !important; }
+
+    tbody.hide-for-phone-only,
+    tbody.show-for-phone-up,
+    tbody.hide-for-phone,
+    tbody.hide-for-phone-down,
+    tbody.hide-for-tablet-only,
+    tbody.show-for-tablet-up,
+    tbody.hide-for-tablet,
+    tbody.hide-for-tablet-down,
+    tbody.show-for-laptop-only,
+    tbody.show-for-laptop-up,
+    tbody.show-for-laptop,
+    tbody.show-for-laptop-down,
+    tbody.hide-for-desktop-only,
+    tbody.hide-for-desktop-up,
+    tbody.hide-for-desktop,
+    tbody.show-for-desktop-down,
+    tbody.hide-for-hd-only,
+    tbody.hide-for-hd-up,
+    tbody.hide-for-hd,
+    tbody.show-for-hd-down {
+    display: table-row-group !important; 
+    }
+
+    tr.hide-for-phone-only,
+    tr.show-for-phone-up,
+    tr.hide-for-phone,
+    tr.hide-for-phone-down,
+    tr.hide-for-tablet-only,
+    tr.show-for-tablet-up,
+    tr.hide-for-tablet,
+    tr.hide-for-tablet-down,
+    tr.show-for-laptop-only,
+    tr.show-for-laptop-up,
+    tr.show-for-laptop,
+    tr.show-for-laptop-down,
+    tr.hide-for-desktop-only,
+    tr.hide-for-desktop-up,
+    tr.hide-for-desktop,
+    tr.show-for-desktop-down,
+    tr.hide-for-hd-only,
+    tr.hide-for-hd-up,
+    tr.hide-for-hd,
+    tr.show-for-hd-down { display: table-row; }
+
+    th.hide-for-phone-only,
+    th.show-for-phone-up,
+    th.hide-for-phone,
+    th.hide-for-phone-down,
+    th.hide-for-tablet-only,
+    th.show-for-tablet-up,
+    th.hide-for-tablet,
+    th.hide-for-tablet-down,
+    th.show-for-laptop-only,
+    th.show-for-laptop-up,
+    th.show-for-laptop,
+    th.show-for-laptop-down,
+    th.hide-for-desktop-only,
+    th.hide-for-desktop-up,
+    th.hide-for-desktop,
+    th.show-for-desktop-down,
+    th.hide-for-hd-only,
+    th.hide-for-hd-up,
+    th.hide-for-hd,
+    th.show-for-hd-down { display: table-cell !important; }
+
+    td.hide-for-phone-only,
+    td.show-for-phone-up,
+    td.hide-for-phone,
+    td.hide-for-phone-down,
+    td.hide-for-tablet-only,
+    td.show-for-tablet-up,
+    td.hide-for-tablet,
+    td.hide-for-tablet-down,
+    td.show-for-laptop-only,
+    td.show-for-laptop-up,
+    td.show-for-laptop,
+    td.show-for-laptop-down,
+    td.hide-for-desktop-only,
+    td.hide-for-desktop-up,
+    td.hide-for-desktop,
+    td.show-for-desktop-down,
+    td.hide-for-hd-only,
+    td.hide-for-hd-up,
+    td.hide-for-hd,
+    td.show-for-hd-down { display: table-cell !important; } 
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .hide-for-tablet-only,
+    .show-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .hide-for-laptop-only,
+    .show-for-laptop-up,
+    .hide-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down { display: inherit !important; }
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .show-for-tablet-only,
+    .hide-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .show-for-laptop-only,
+    .hide-for-laptop-up,
+    .show-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down { display: none !important; }
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .hidden-for-tablet-only,
+    .visible-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .hidden-for-laptop-only,
+    .visible-for-laptop-up,
+    .hidden-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down {
+        position: static !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        clip: auto; 
+    }
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .visible-for-tablet-only,
+    .hidden-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .visible-for-laptop-only,
+    .hidden-for-laptop-up,
+    .visible-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px); 
+    }
+
+    table.hide-for-phone-only,
+    table.show-for-phone-up,
+    table.hide-for-phone,
+    table.hide-for-phone-down,
+    table.hide-for-tablet-only,
+    table.show-for-tablet-up,
+    table.hide-for-tablet,
+    table.hide-for-tablet-down,
+    table.hide-for-laptop-only,
+    table.show-for-laptop-up,
+    table.hide-for-laptop,
+    table.hide-for-laptop-down,
+    table.show-for-desktop-only,
+    table.show-for-desktop-up,
+    table.show-for-desktop,
+    table.show-for-desktop-down,
+    table.hide-for-hd-only,
+    table.hide-for-hd-up,
+    table.hide-for-hd,
+    table.show-for-hd-down { display: table !important; }
+
+    thead.hide-for-phone-only,
+    thead.show-for-phone-up,
+    thead.hide-for-phone,
+    thead.hide-for-phone-down,
+    thead.hide-for-tablet-only,
+    thead.show-for-tablet-up,
+    thead.hide-for-tablet,
+    thead.hide-for-tablet-down,
+    thead.hide-for-laptop-only,
+    thead.show-for-laptop-up,
+    thead.hide-for-laptop,
+    thead.hide-for-laptop-down,
+    thead.show-for-desktop-only,
+    thead.show-for-desktop-up,
+    thead.show-for-desktop,
+    thead.show-for-desktop-down,
+    thead.hide-for-hd-only,
+    thead.hide-for-hd-up,
+    thead.hide-for-hd,
+    thead.show-for-hd-down { display: table-header-group !important; }
+
+    tbody.hide-for-phone-only,
+    tbody.show-for-phone-up,
+    tbody.hide-for-phone,
+    tbody.hide-for-phone-down,
+    tbody.hide-for-tablet-only,
+    tbody.show-for-tablet-up,
+    tbody.hide-for-tablet,
+    tbody.hide-for-tablet-down,
+    tbody.hide-for-laptop-only,
+    tbody.show-for-laptop-up,
+    tbody.hide-for-laptop,
+    tbody.hide-for-laptop-down,
+    tbody.show-for-desktop-only,
+    tbody.show-for-desktop-up,
+    tbody.show-for-desktop,
+    tbody.show-for-desktop-down,
+    tbody.hide-for-hd-only,
+    tbody.hide-for-hd-up,
+    tbody.hide-for-hd,
+    tbody.show-for-hd-down { display: table-row-group !important; }
+
+    tr.hide-for-phone-only,
+    tr.show-for-phone-up,
+    tr.hide-for-phone,
+    tr.hide-for-phone-down,
+    tr.hide-for-tablet-only,
+    tr.show-for-tablet-up,
+    tr.hide-for-tablet,
+    tr.hide-for-tablet-down,
+    tr.hide-for-laptop-only,
+    tr.show-for-laptop-up,
+    tr.hide-for-laptop,
+    tr.hide-for-laptop-down,
+    tr.show-for-desktop-only,
+    tr.show-for-desktop-up,
+    tr.show-for-desktop,
+    tr.show-for-desktop-down,
+    tr.hide-for-hd-only,
+    tr.hide-for-hd-up,
+    tr.hide-for-hd,
+    tr.show-for-hd-down { display: table-row; }
+
+    th.hide-for-phone-only,
+    th.show-for-phone-up,
+    th.hide-for-phone,
+    th.hide-for-phone-down,
+    th.hide-for-tablet-only,
+    th.show-for-tablet-up,
+    th.hide-for-tablet,
+    th.hide-for-tablet-down,
+    th.hide-for-laptop-only,
+    th.show-for-laptop-up,
+    th.hide-for-laptop,
+    th.hide-for-laptop-down,
+    th.show-for-desktop-only,
+    th.show-for-desktop-up,
+    th.show-for-desktop,
+    th.show-for-desktop-down,
+    th.hide-for-hd-only,
+    th.hide-for-hd-up,
+    th.hide-for-hd,
+    th.show-for-hd-down { display: table-cell !important; }
+
+    td.hide-for-phone-only,
+    td.show-for-phone-up,
+    td.hide-for-phone,
+    td.hide-for-phone-down,
+    td.hide-for-tablet-only,
+    td.show-for-tablet-up,
+    td.hide-for-tablet,
+    td.hide-for-tablet-down,
+    td.hide-for-laptop-only,
+    td.show-for-laptop-up,
+    td.hide-for-laptop,
+    td.hide-for-laptop-down,
+    td.show-for-desktop-only,
+    td.show-for-desktop-up,
+    td.show-for-desktop,
+    td.show-for-desktop-down,
+    td.hide-for-hd-only,
+    td.hide-for-hd-up,
+    td.hide-for-hd,
+    td.show-for-hd-down { display: table-cell !important; }
+}
+
+@media only screen and (min-width: 1920px) {
+
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .hide-for-tablet-only,
+    .show-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .hide-for-laptop-only,
+    .show-for-laptop-up,
+    .hide-for-laptop,
+    .hide-for-laptop-down,
+    .hide-for-desktop-only,
+    .show-for-desktop-up,
+    .hide-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .show-for-hd-down { display: inherit !important; }
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .show-for-tablet-only,
+    .hide-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .show-for-laptop-only,
+    .hide-for-laptop-up,
+    .show-for-laptop,
+    .show-for-laptop-down,
+    .show-for-desktop-only,
+    .hide-for-desktop-up,
+    .show-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .hide-for-hd-down { display: none !important; }
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .hidden-for-tablet-only,
+    .visible-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .hidden-for-laptop-only,
+    .visible-for-laptop-up,
+    .hidden-for-laptop,
+    .hidden-for-laptop-down,
+    .hidden-for-desktop-only,
+    .visible-for-desktop-up,
+    .hidden-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .visible-for-hd-down {
+        position: static !important;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        clip: auto; 
+    }
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .visible-for-tablet-only,
+    .hidden-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .visible-for-laptop-only,
+    .hidden-for-laptop-up,
+    .visible-for-laptop,
+    .visible-for-laptop-down,
+    .visible-for-desktop-only,
+    .hidden-for-desktop-up,
+    .visible-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .hidden-for-hd-down {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px); 
+    }
+
+    table.hide-for-phone-only, 
+    table.show-for-phone-up, 
+    table.hide-for-phone, 
+    table.hide-for-phone-down, 
+    table.hide-for-tablet-only, 
+    table.show-for-tablet-up, 
+    table.hide-for-tablet, 
+    table.hide-for-tablet-down, 
+    table.hide-for-laptop-only, 
+    table.show-for-laptop-up, 
+    table.hide-for-laptop, 
+    table.hide-for-laptop-down, 
+    table.hide-for-desktop-only, 
+    table.show-for-desktop-up, 
+    table.hide-for-desktop, 
+    table.hide-for-desktop-down, 
+    table.show-for-hd-only, 
+    table.show-for-hd-up, 
+    table.show-for-hd, 
+    table.show-for-hd-down { display: table !important; }
+
+    thead.hide-for-phone-only, 
+    thead.show-for-phone-up, 
+    thead.hide-for-phone, 
+    thead.hide-for-phone-down, 
+    thead.hide-for-tablet-only, 
+    thead.show-for-tablet-up, 
+    thead.hide-for-tablet, 
+    thead.hide-for-tablet-down, 
+    thead.hide-for-laptop-only, 
+    thead.show-for-laptop-up, 
+    thead.hide-for-laptop, 
+    thead.hide-for-laptop-down, 
+    thead.hide-for-desktop-only, 
+    thead.show-for-desktop-up, 
+    thead.hide-for-desktop, 
+    thead.hide-for-desktop-down, 
+    thead.show-for-hd-only, 
+    thead.show-for-hd-up, 
+    thead.show-for-hd, 
+    thead.show-for-hd-down { display: table-header-group !important; }
+
+    tbody.hide-for-phone-only, 
+    tbody.show-for-phone-up, 
+    tbody.hide-for-phone, 
+    tbody.hide-for-phone-down, 
+    tbody.hide-for-tablet-only, 
+    tbody.show-for-tablet-up, 
+    tbody.hide-for-tablet, 
+    tbody.hide-for-tablet-down, 
+    tbody.hide-for-laptop-only, 
+    tbody.show-for-laptop-up, 
+    tbody.hide-for-laptop, 
+    tbody.hide-for-laptop-down, 
+    tbody.hide-for-desktop-only, 
+    tbody.show-for-desktop-up, 
+    tbody.hide-for-desktop, 
+    tbody.hide-for-desktop-down, 
+    tbody.show-for-hd-only, 
+    tbody.show-for-hd-up, 
+    tbody.show-for-hd, 
+    tbody.show-for-hd-down { display: table-row-group !important; }
+
+    tr.hide-for-phone-only, 
+    tr.show-for-phone-up, 
+    tr.hide-for-phone, 
+    tr.hide-for-phone-down, 
+    tr.hide-for-tablet-only, 
+    tr.show-for-tablet-up, 
+    tr.hide-for-tablet, 
+    tr.hide-for-tablet-down, 
+    tr.hide-for-laptop-only, 
+    tr.show-for-laptop-up, 
+    tr.hide-for-laptop, 
+    tr.hide-for-laptop-down, 
+    tr.hide-for-desktop-only, 
+    tr.show-for-desktop-up, 
+    tr.hide-for-desktop, 
+    tr.hide-for-desktop-down, 
+    tr.show-for-hd-only, 
+    tr.show-for-hd-up, 
+    tr.show-for-hd, 
+    tr.show-for-hd-down { display: table-row; }
+
+    th.hide-for-phone-only, 
+    th.show-for-phone-up, 
+    th.hide-for-phone, 
+    th.hide-for-phone-down, 
+    th.hide-for-tablet-only, 
+    th.show-for-tablet-up, 
+    th.hide-for-tablet, 
+    th.hide-for-tablet-down, 
+    th.hide-for-laptop-only, 
+    th.show-for-laptop-up, 
+    th.hide-for-laptop, 
+    th.hide-for-laptop-down, 
+    th.hide-for-desktop-only, 
+    th.show-for-desktop-up, 
+    th.hide-for-desktop, 
+    th.hide-for-desktop-down, 
+    th.show-for-hd-only, 
+    th.show-for-hd-up, 
+    th.show-for-hd, 
+    th.show-for-hd-down { display: table-cell !important; }
+
+    td.hide-for-phone-only, 
+    td.show-for-phone-up, 
+    td.hide-for-phone, 
+    td.hide-for-phone-down, 
+    td.hide-for-tablet-only, 
+    td.show-for-tablet-up, 
+    td.hide-for-tablet, 
+    td.hide-for-tablet-down, 
+    td.hide-for-laptop-only, 
+    td.show-for-laptop-up, 
+    td.hide-for-laptop, 
+    td.hide-for-laptop-down, 
+    td.hide-for-desktop-only, 
+    td.show-for-desktop-up, 
+    td.hide-for-desktop, 
+    td.hide-for-desktop-down, 
+    td.show-for-hd-only, 
+    td.show-for-hd-up, 
+    td.show-for-hd, 
+    td.show-for-hd-down { display: table-cell              !important; } 
+}
+
+.show-for-landscape,
+.hide-for-portrait   { display: inherit                    !important; }
+
+.hide-for-landscape,
+.show-for-portrait   { display: none                       !important; }
+
+table.hide-for-landscape, 
+table.show-for-portrait, 
+table.hide-for-touch { display: table                      !important; }
+
+thead.hide-for-landscape, 
+thead.show-for-portrait, 
+thead.hide-for-touch { display: table-header-group         !important; }
+
+tbody.hide-for-landscape, 
+tbody.show-for-portrait, 
+tbody.hide-for-touch { display: table-row-group            !important; }
+
+tr.hide-for-landscape, 
+tr.show-for-portrait, 
+tr.hide-for-touch    { display: table-row                  !important; }
+
+td.hide-for-landscape, 
+td.show-for-portrait, 
+td.hide-for-touch    { display: table-cell                 !important; }
+
+th.hide-for-landscape, 
+th.show-for-portrait, 
+th.hide-for-touch    { display: table-cell                 !important; }
+
+@media only screen and (orientation: landscape) {
+
+    .show-for-landscape,
+    .hide-for-portrait      { display: inherit             !important; }
+
+    .hide-for-landscape,
+    .show-for-portrait      { display: none                !important; }
+
+    table.show-for-landscape, 
+    table.hide-for-portrait { display: table               !important; }
+
+    thead.show-for-landscape, 
+    thead.hide-for-portrait { display: table-header-group  !important; }
+
+    tbody.show-for-landscape, 
+    tbody.hide-for-portrait { display: table-row-group     !important; }
+
+    tr.show-for-landscape, 
+    tr.hide-for-portrait    { display: table-row           !important; }
+
+    td.show-for-landscape, 
+    td.hide-for-portrait    { display: table-cell          !important; }
+
+    th.show-for-landscape, 
+    th.hide-for-portrait    { display: table-cell          !important; } 
+}
+
+@media only screen and (orientation: portrait) {
+
+    .show-for-portrait,
+    .hide-for-landscape      { display: inherit            !important; }
+
+    .hide-for-portrait,
+    .show-for-landscape      { display: none               !important; }
+
+    table.show-for-portrait, 
+    table.hide-for-landscape { display: table              !important; }
+
+    thead.show-for-portrait, 
+    thead.hide-for-landscape { display: table-header-group !important; }
+
+    tbody.show-for-portrait, 
+    tbody.hide-for-landscape { display: table-row-group    !important; }
+
+    tr.show-for-portrait, 
+    tr.hide-for-landscape    { display: table-row          !important; }
+
+    td.show-for-portrait, 
+    td.hide-for-landscape    { display: table-cell         !important; }
+
+    th.show-for-portrait, 
+    th.hide-for-landscape    { display: table-cell         !important; } 
+}
+
+.show-for-touch              { display: none               !important; }
+
+.hide-for-touch              { display: inherit            !important; }
+
+.touch .show-for-touch       { display: inherit            !important; }
+
+.touch .hide-for-touch       { display: none               !important; }
+
+.touch table.show-for-touch  { display: table              !important; }
+
+.touch thead.show-for-touch  { display: table-header-group !important; }
+
+.touch tbody.show-for-touch  { display: table-row-group    !important; }
+
+.touch tr.show-for-touch     { display: table-row          !important; }
+
+.touch td.show-for-touch,
+.touch th.show-for-touch     { display: table-cell         !important; }
+
+.show-for-sr {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); 
+}
+
+.show-on-focus {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); 
+}
+
+.show-on-focus:focus, .show-on-focus:active {
+    position: static !important;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto; 
+}

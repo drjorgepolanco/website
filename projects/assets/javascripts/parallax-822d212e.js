@@ -1,0 +1,1 @@
+(function(){"use strict";var i;i=Modernizr.touch,$(".img-holder").imageScroll({imageAttribute:i===!0?"image-mobile":"image",touch:i})}).call(this);

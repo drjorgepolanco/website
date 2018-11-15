@@ -1,0 +1,97 @@
+<html>
+<head>
+  <title>Riot Starter - Music Videos</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
+</head>
+<body>
+
+  <div class="row">
+    <h1 class="center_text"><strong>Music Video Playlist Manager</strong></h1>
+    <hr>
+    <div id="video-display-container" class="large-12 columns">
+      <div id="video-display"></div>
+    </div>
+    <div class="large-8 columns">
+      <form id="new-video">
+        <h3><strong>Add Video</strong></h3>
+        <hr>
+        <label>Title</label>
+        <input type="text" name="title" class="title" placeholder="Write the video name here">
+        <label>Genre</label>
+        <select class="genre">
+          <option>Choose one</option>
+          <option value="bachata">bachata</option>
+          <option value="ballad">ballad</option>
+          <option value="blues">blues</option>
+          <option value="classic">classic</option>
+          <option value="country">country</option>
+          <option value="hip-hop">hip-hop</option>
+          <option value="jazz">jazz</option>
+          <option value="merengue">merengue</option>
+          <option value="metal">metal</option>
+          <option value="pop">pop</option>
+          <option value="rap">rap</option>
+          <option value="reggae">reggae</option>
+          <option value="reggaeton">reggaeton</option>
+          <option value="rock">rock</option>
+          <option value="salsa">salsa</option>
+          <option value="spanish-rock">spanish-rock</option>
+        </select>
+        <label>Youtube ID</label>
+        <input type="text" name="youtube_id" class="youtube_id" placeholder="Paste the id here. Eg. GyR2HJ9B7aM">
+        <input type="submit" value="Add Video" class="button success expand">
+      </form>
+      <br>
+      <h3><strong>Video List</strong></h3>
+      <hr>
+      <div id="video-list"></div>
+    </div>
+
+    <div class="large-4 columns">
+      <h3><strong>Video Stats</strong></h3>
+      <hr>
+      <div id="genre-stats">
+      </div>
+    </div>
+  </div>
+  
+  <div id="templates">
+    <ul>
+      <script class="video-list-item" type="text/template">
+        <div class="large-12 columns list-item-container" data-youtube-id="{ youtubeId }">
+          <div class="large-5 columns list-item-video">
+            <iframe width="240" height="135" src="http://www.youtube.com/embed/{ youtubeId }" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="large-7 columns list-item-text">
+            <h5><b><a href="http://www.youtube.com/watch?v={ youtubeId }" target="blank">{ title }</a></b></h5>
+            <p>Genre: <b>{ genre }</b></p>
+          </div>
+        </div>
+      </script>
+    </ul>
+
+    <script class="genre-stat" type="text/template">
+      <div class="large-12 columns">
+        <div class="large-6 columns">
+          <p><strong>{ genre }:</strong></p>
+        </div>
+        <div class="large-6 columns">
+          <p>{ genreCount } video(s).</p>
+        </div>
+      </div>
+    </script>
+
+    <script class="video-embed" type="text/template">
+      <div class="large-12 columns">
+        <iframe width="853" height="480" src="http://www.youtube.com/embed/{ youtubeId }" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </script>
+  </div>
+
+<script src="vendor/js/jquery-1.10.2.min.js"></script>
+<script src="vendor/js/riot.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

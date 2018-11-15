@@ -1,0 +1,9 @@
+.sass-cache/
+**/.DS_Store
+wp-content/themes/ow/.sass-cache/
+wp-content/themes/ow/style.css.map
+wp-content/themes/ow/style-admin.css.map
+wp-content/themes/ow-child/.sass-cache/
+wp-content/themes/ow-child/style.css.map
+wp-config.php
+error_log

@@ -1,0 +1,214 @@
+<html>
+<head>
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <style type="text/css">
+    #wrapper {
+      text-align: center;
+    }
+    .response {
+      color: blue;
+    }
+    .landmine {
+      color: red;
+    }
+    .tries {
+      font-size: 2em;
+      font-weight: bold;
+      color: blue;
+    }
+    .wins {
+      font-size: 2em;
+      font-weight: bold;
+      color: green;
+    }
+    .losses {
+      font-size: 2em;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="wrapper">
+    <label><h1>Pick a number from 1-100:</h1></label>
+    <br>
+    <label class="response"></label>
+    <br>
+    <label><h3><strong>Watch for land mines!</strong></h3></label>
+    <br>
+    <label class="landmine"></label>
+    <br>
+    <br>
+    <input class="user-input" type="text" />
+    <br>
+    <br>
+    <input class="submit-button btn btn-success" type="button" value="Guess the Number" />
+    <input class="clear-button btn btn-default" type="button" value="Clear Fields" />
+    <input class="new-game-button btn btn-danger" type="button" value="Start New Game" />
+    <br>
+    <br>
+    <label>Tries:</label>
+    <br>
+    <label class="tries"></label>
+    <br>
+    <br>
+    <label><h4>Total Games Won:</h4></label>
+    <br>
+    <label class="wins"></label>
+    <br>
+    <br>
+    <label><h4>Total Games Lost:</h4></label>
+    <br>
+    <label class="losses"></label>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+/*
+  GUESS THE NUMBER
+  ================
+
+  - Generate and stores a secret, random number
+  - Prompt the user for a number between 1 and 100
+  - Respond to the user's number:
+    - If higher, it says to pick lower
+    - If lower, it says to pick higher
+  - Repeat steps 2 and 3 until the user picks the correct number
+  - Congratulate the user when they win!
+
+  jQuery
+  ------
+  - Convert your exercise from above to use the html page, without using alert or prompt.
+  - Add a button that starts a new game. It should:
+  - Generate a new secret number
+  - Clear the value of the text box
+  - Display a message that a new game has started
+
+  EXTENSIONS
+  ----------
+
+  - Add a "landmine" secret number. If the player accidentally guesses that number, 
+    they lose the game. After every guess, you should tell the user how far away
+    the landmine number is from their guess.
+*/
+
+  
+  var secret = parseInt(Math.random() * 100, 10) + 1;
+  var landMine = parseInt(Math.random() * 100, 10) + 1;
+  var tries = 1;
+  var wins = 0;
+  var losses = 0;
+  var userNumber = 0;
+  
+  function clear() {
+    $(".response").text("");
+    $(".landmine").text("");
+    $(".user-input").val("");
+    $(".user-input").focus();
+  };
+
+  function repeat() {
+    $(".tries").text(tries);
+    tries += 1;
+    $(".user-input").focus();
+  };
+
+  function newGame() {
+    alert("New Game Started!");
+    clear();
+    tries = 1;
+    $(".tries").text("");
+    secret = parseInt(Math.random() * 100, 10) + 1;
+    landMine = parseInt(Math.random() * 100, 10) + 1;
+  };  
+
+  function landMineAdvisor() {
+    if (userNumber < landMine) {
+      if (landMine - userNumber <= 15) {
+        $(".landmine").text("Be careful! You are very near the landmine.").css("color", "red");
+      }
+      else if (landMine - userNumber > 15 && landMine - userNumber < 30) {
+        $(".landmine").text("Watch out! There are landmines around.").css("color", "orange");
+      }
+      else {
+        $(".landmine").text("Doing right, no landmines around.").css("color", "gray");
+      }
+      // $(".landmine").text("You are " + (landMine -  userNumber) + " numbers away from the landmine.");
+    }
+    else {
+      if (userNumber - landMine <= 15) {
+        $(".landmine").text("Be careful! You are very near the landmine.").css("color", "red");
+      }
+      else if (userNumber - landMine > 15 && userNumber - landMine < 30) {
+        $(".landmine").text("Watch out! There are landmines around.").css("color", "orange");
+      }
+      else {
+        $(".landmine").text("Doing right, no landmines around.").css("color", "gray");;
+      }
+      // $(".landmine").text("You are " + (userNumber - landMine) + " numbers away from the landmine.");
+    }
+  }
+
+  function guess() {
+    $(".user-input").focus();
+    $(".submit-button").on('click', function(e) {
+      userNumber = $(".user-input").val();
+      if (!isNaN(userNumber)) {
+        if (userNumber > 100 || userNumber < 1) {
+          $(".response").text("The number needs to be between 1 and 100.");
+          repeat();
+        }
+        else {
+          if (userNumber == landMine) {
+            alert("Sorry, you lost the game.");
+            losses += 1;
+            $(".losses").text(losses);
+            newGame();
+          }
+          else {
+            if (userNumber > secret) {
+              $(".response").text("Pick lower");
+              landMineAdvisor();
+              repeat();
+            }
+            else if (userNumber < secret) {
+              $(".response").text("Pick higher");
+              landMineAdvisor();
+              repeat();
+            }
+            else {
+              $(".response").text("Congratulations! You win after " + (tries - 1) + " tries!");
+              alert("Congratulations! You win after " + (tries - 1) + " tries!");
+              wins += 1;
+              $(".wins").text(wins);
+              newGame();
+            }
+          }
+        }
+      }
+      else {
+        $(".response").text("That's not a number!");
+        repeat();
+      }
+    });
+  };
+  guess();
+
+  $(".clear-button").on("click", function() {
+    clear();
+  });
+
+  $(".new-game-button").on("click", function() {
+    newGame();
+  });
+
+  $(document).on("click", function() {
+    $(".user-input").focus();
+  });
+
+</script>
+</body>
+</html>

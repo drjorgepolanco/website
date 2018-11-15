@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Interlude</title>
+  <link href='http://fonts.googleapis.com/css?family=Nunito:700' 
+        rel='stylesheet' 
+        type='text/css'>
+  <link rel="stylesheet" 
+        href="css/style.css">
+</head>
+
+<body>
+  
+  <!-- 
+  Front-End Developer Assignment
+
+  Goal:
+    Implement a live HTML/CSS/Javascript button.
+
+  Assets:
+    1. PSD with a layered design.
+    2. A reference video showing the live result.
+    3. Font: N​unito on Google Fonts.​
+
+  Guidelines:
+    1. Implement a static button using HTML/CSS/Javascript. You may use images 
+       but keep performance in mind. The text section should be dynamic with 
+       the font mentioned above.
+    2. Implement Interactivity - make sure you implement all expected button states.
+    3. Commit the result to a public Github account.
+
+  Notes:
+    1. You may use any Javascript/CSS libraries you wish.
+    2. If you feel you can provide better UX in terms of animations and 
+       interactivity than the one referenced in the video - feel free to do so. 
+  -->
+
+
+
+  <!-- 
+
+  ===============
+  THOUGHT PROCESS
+  ===============
+
+    1. Get the images strictly necessary out of the psd: cat and arrow.
+    2. Create the circle and text box with css
+    3. Put the elements together, just like the provided .psd
+    4. Implement animations
+    5. Refactor 
+
+  -->
+
+
+  <div id="container">
+    <div id="circle"></div>
+    <div id="cat-container">
+      <img src="images/cat.png" alt="Cat" id="cat">
+    </div>
+    <div id="text-box">
+      <h1 id="text">Cat Lover</h1>
+    </div>
+    <div id="arrow">
+      <img src="images/arrow.png" alt="Arrow">
+    </div>
+  </div>
+  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <script src="js/main.js"></script> 
+</body>
+</html>

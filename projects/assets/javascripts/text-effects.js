@@ -1,0 +1,1 @@
+(function(){"use strict";$(".c").mouseenter(function(){return $(this).hasClass("cycling")===!1?$(this).charcycle({target:".text"}):void 0})}).call(this);

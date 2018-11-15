@@ -1,0 +1,205 @@
+* {
+  transition: all 0.3s;
+}
+
+
+/* TYPOGRAPHY */
+
+body {
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+body:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  z-index: -1;
+  background: url('../images/rails_6.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-filter: sepia(0.5);
+          filter: sepia(0.5);
+  opacity: 0.3;
+}
+
+h1, h2, h3, h5, h6 {
+  font-family: 'Play', sans-serif;
+}
+
+a {
+  color: #4775D1;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.5em;
+  margin: 0.5em;
+  font-family: 'Sorts Mill Goudy', serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.red {
+  color: #f04124;
+}
+
+.blue {
+  color: #008CBA;
+}
+
+.green {
+  color: #43AC6A;
+}
+
+
+/* GENERAL LAYOUT */
+
+.sub-header {
+  border-top: 4px solid #333;
+  border-bottom: 2px dotted #333;
+}
+
+.sub-header h3 {
+  margin: 8px;
+}
+
+.padding-top {
+  padding: 0.5em 0 0 0;;
+}
+
+.bottom-space {
+  padding-bottom: 1em; 
+}
+
+.reveal-modal h2 {
+  border-bottom: 2px solid #333;
+}
+
+
+/* ABOUT */
+
+.about-me {
+  padding: 1.5em 0 0 0;
+  border-top: 4px solid #333;
+}
+
+.headshot {
+  border-radius: 50%;
+  float: left;
+  margin-top: 0.3em;
+}
+
+.facts {
+  padding-right: 0;
+}
+
+.about {
+  margin-bottom: 0;
+}
+
+.about-small {
+  padding-top: 1em;
+}
+
+.quote {
+  font-size: 1.3em;
+}
+
+
+/* EDUCATION & EXPERIENCE */
+
+.education {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.education i {
+  padding-top: 0.5em;
+}
+
+
+/* SKILLS */
+
+.skill {
+  float: left;
+}
+
+.tip {
+  float: right;
+  padding-top: 0.75em;
+}
+
+.skill-set {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.bar {
+  padding: 0.75em 0.5em 0 0;
+}
+
+
+/* INTERESTS & CONTACT */
+
+.top-line {
+  border-top: 4px solid #333;
+}
+
+.like {
+  padding-left: 0;
+  padding-top: 0.5em;
+}
+
+.contact {
+  padding-right: 0;
+  padding-top: 0.5em;
+}
+
+.sub-header-footer {
+  border-bottom: 2px dotted #333;
+}
+
+.sub-header-footer-small {
+  border-top: 4px solid #333;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  border-bottom: 2px dotted #333;
+}
+
+.like-icons {
+  padding-top: 1.5em;
+  text-align: center;
+  padding-bottom: 0.75em;
+}
+
+.info-container {
+  padding: 0.5em 0 0 0;
+}
+
+.info {
+  padding: 0.5em 0 0 0;
+}
+
+.contact-icon {
+  text-align: center;
+}
+
+.contact-info {
+  padding: 0;
+}
