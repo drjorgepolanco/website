@@ -1,0 +1,24 @@
+/* ========================================================================== */
+/* ACF: Markup: Logo */
+/* ================= */
+
+.ow-wrap-logo {
+    display: block;
+    width: 120px;
+
+    img {
+        width: 100%;
+        display: block;
+    }  
+    picture {
+        display: table;
+
+        img {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    @include tablet_ls {
+        width: 140px;
+    }
+}

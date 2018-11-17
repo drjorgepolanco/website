@@ -1,0 +1,252 @@
+{
+    "key": "group_5bbeb7a7cbee9",
+    "title": "Section: Video",
+    "fields": [
+        {
+            "key": "field_5bbeb7a7e59c6",
+            "label": "Type",
+            "name": "type",
+            "type": "button_group",
+            "instructions": "<p>\r\n    <strong>Dynamic:<\/strong> Natural Content Height\r\n    <br>\r\n    <strong>Static:<\/strong> Choose Section Height in relation to Screen Height\r\n<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "dyc": "Dynamic",
+                "stc": "Static"
+            },
+            "allow_null": 0,
+            "default_value": "dyc",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bbeb7a7e5a61",
+            "label": "Section Wrapper",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5bbeb7a7e5aed",
+            "label": "Section",
+            "name": "sctn",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5bbeb7a7ed224",
+                    "label": "Properties",
+                    "name": "props",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb2f59940708",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_5bbffd0e9f242",
+                    "label": "Max Width",
+                    "name": "mw",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb26b23ac3e7",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_5bbeb7a7ed2bf",
+                    "label": "Height",
+                    "name": "height",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5bbeb7a7e59c6",
+                                "operator": "==",
+                                "value": "stc"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb402a8586aa",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                }
+            ]
+        },
+        {
+            "key": "field_5bbeb7a7e5b8f",
+            "label": "Content Wrapper",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5bbeb7a7e5c19",
+            "label": "Content",
+            "name": "ctnt",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5bbeb7cb30d22",
+                    "label": "Ratio",
+                    "name": "ratio",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5bbeb7a7e59c6",
+                                "operator": "==",
+                                "value": "dyc"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5ba9c56683117",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_5bbeb7f430d23",
+                    "label": "Video",
+                    "name": "video",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5ba97ef8ddc5f",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1541815768
+}

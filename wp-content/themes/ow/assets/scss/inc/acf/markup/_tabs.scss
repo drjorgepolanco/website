@@ -1,0 +1,136 @@
+/* ========================================================================== */
+/* ACF: Markup: Tabs */
+/* ================== */
+
+.ow-tabs {
+	height: 100%;
+
+	.ow-menu,
+	.ow-ctnt {
+		height: 100%;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			height: 100%;
+		}
+	}
+	.ow-menu {
+		position: absolute;
+		z-index: 1;
+	}
+	&.ow-put-menu-left {
+		
+		.ow-menu {
+			left: 0;
+			top: 0;
+		}
+	}
+	&.ow-put-menu-right {
+
+		.ow-menu {	
+			top: 0;
+			right: 0;
+		}
+	}
+	&.ow-put-menu-top,
+	&.ow-put-menu-bottom {
+
+		.ow-menu {
+			width: auto;
+			height: auto;
+
+			ul {
+				height: auto;
+
+				li {
+					display: block;
+					width: auto;
+					float: left;
+				}
+			}
+		}
+	}
+	&.ow-put-menu-top {
+
+		.ow-menu {
+			left: 0;
+			top: 0;
+		}	
+		.ow-ctnt {
+			padding-top: 100px;
+		}
+	}
+	&.ow-put-menu-bottom {
+		
+		.ow-menu {
+			left: 0;
+			bottom: 0;
+		}	
+		.ow-ctnt {
+			padding-bottom: 100px;
+		}
+	}
+}
+
+
+/* Single Tab */
+.ow-tab {
+	
+	&.ow-tab-menu-item {
+		display: block;
+		width: 100%;
+		background: white;
+		padding: 0;
+
+		&.active {
+
+			a {
+				background: $ow-grey-soft;
+				box-shadow: $ow-shadow-box;
+			}
+		}
+
+		/* <a> */
+		.ow-trigger {
+			display: block;
+			width: 100%;
+			padding: 8px;
+			color: black;
+		}
+		.ow-wrap-text {
+			display: block;
+			text-align: center;
+			padding: 4px;
+			font-size: 14px;
+		}
+		/* <span> Wrapper of Icon */
+		.ow-wrap-icon {
+			display: block;
+			width: 48px;
+			margin: 0 auto;
+			padding: 4px;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	&.ow-tab-ctnt {
+		display: none;
+		height: 100%;
+		padding: 0;
+
+		&.ow-tab-0 {
+			display: block;
+		}
+	}
+	&.active {
+	
+	}
+	.ow-ctnt {
+		display: none;
+	}
+}

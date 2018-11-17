@@ -1,0 +1,64 @@
+{
+    "key": "group_5bb402a8586aa",
+    "title": "Markup: Section: Height",
+    "fields": [
+        {
+            "key": "field_5bb402cd2e326",
+            "label": "Height",
+            "name": "prop_sctn_height",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "qt-one": "25%",
+                "td-one": "33%",
+                "qt-two": "50%",
+                "td-two": "66%",
+                "qt-three": "75%",
+                "qt-four": "100%"
+            },
+            "default_value": [
+                "qt-four"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539400335
+}

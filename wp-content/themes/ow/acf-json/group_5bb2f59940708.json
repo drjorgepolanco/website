@@ -1,0 +1,71 @@
+{
+    "key": "group_5bb2f59940708",
+    "title": "Markup: Props",
+    "fields": [
+        {
+            "key": "field_5bb2f5debb94b",
+            "label": "ID",
+            "name": "props_id",
+            "type": "text",
+            "instructions": "<p style=\"color: orange;\">Must be one and unique.<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "the-custom-name-3",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb2f64bbb94c",
+            "label": "Class",
+            "name": "props_class",
+            "type": "text",
+            "instructions": "<p style=\"color: orange;\">Can be more than one and reused.<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "the-reusable-name-5 other-name",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539400324
+}

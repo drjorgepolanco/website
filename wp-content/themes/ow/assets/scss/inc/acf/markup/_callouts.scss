@@ -1,0 +1,38 @@
+/* ========================================================================== */
+/* ACF: Markup: Callouts */
+/* ===================== */
+
+.ow-wrap-clts {
+	width: 100%;
+
+	.ow-clt {
+		height: 100%;
+
+		.ow-wrap-content {
+			height: 100%;
+		}
+	}
+    @include tablet_pt {
+
+    	.ow-wrap-clt {
+			float: left;
+
+	        &.ow-clt-2,
+	        &.ow-clt-4 {
+	            width: 50% !important;
+	        }
+	        &.ow-clt-3 {
+	            width: 33.3333% !important;
+	        }
+	    }
+    }
+    @include tablet_ls {
+
+    	.ow-wrap-clt {
+        
+	        &.ow-clt-4 {
+	            width: 25% !important;
+	        }
+	    }
+    }
+}

@@ -1,0 +1,197 @@
+{
+    "key": "group_5bb9d72d98b0d",
+    "title": "Page: Home",
+    "fields": [
+        {
+            "key": "field_5bb9d8be4fe24__trashed",
+            "label": "Home",
+            "name": "page_home",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5bb9d8ce4fe25",
+                    "label": "Hero",
+                    "name": "hero",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb40264b9552",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": [
+                        "hide-outer-boundary",
+                        "hide-outer-label"
+                    ],
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_5bb9d8f14fe26",
+                    "label": "Our Techniques",
+                    "name": "techniques",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bb9d9024fe27",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bb9d90e4fe28",
+                            "label": "Subsections",
+                            "name": "subsctns",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 4,
+                            "layout": "block",
+                            "button_label": "Add Subsection",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5bb9d9234fe29",
+                                    "label": "Subsection",
+                                    "name": "subsctn",
+                                    "type": "component_field",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "field_group_key": "group_5bb81294316a7",
+                                    "repeatable": 0,
+                                    "layout": "block",
+                                    "button_label": "",
+                                    "appearances": [
+                                        "hide-outer-boundary",
+                                        "hide-outer-label"
+                                    ],
+                                    "min": null,
+                                    "max": null,
+                                    "collapsed": "",
+                                    "sub_fields": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5bb9d9554fe2a",
+                    "label": "Call to Action",
+                    "name": "cta",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb2f49c2703d",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": [
+                        "hide-outer-boundary",
+                        "hide-outer-label"
+                    ],
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "783"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "is_acf_component": 0,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539403394
+}

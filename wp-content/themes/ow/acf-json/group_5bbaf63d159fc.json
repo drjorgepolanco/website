@@ -1,0 +1,172 @@
+{
+    "key": "group_5bbaf63d159fc",
+    "title": "Section: Callouts",
+    "fields": [
+        {
+            "key": "field_5bbaf63d3fb2a",
+            "label": "Type",
+            "name": "type",
+            "type": "button_group",
+            "instructions": "<p>\r\n    <strong>Dynamic:<\/strong> Natural Content Height\r\n<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "dyc": "Dynamic"
+            },
+            "allow_null": 0,
+            "default_value": "dyc",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bbaf63d3fbd5",
+            "label": "Section Wrapper",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5bbaf63d3fc72",
+            "label": "Section",
+            "name": "sctn",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5bbaf63d4af9d",
+                    "label": "Properties",
+                    "name": "props",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb2f59940708",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                },
+                {
+                    "key": "field_5bbffcd2873c6",
+                    "label": "Max Width",
+                    "name": "mw",
+                    "type": "component_field",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "field_group_key": "group_5bb26b23ac3e7",
+                    "repeatable": 0,
+                    "layout": "block",
+                    "button_label": "",
+                    "appearances": "",
+                    "min": null,
+                    "max": null,
+                    "collapsed": "",
+                    "sub_fields": []
+                }
+            ]
+        },
+        {
+            "key": "field_5bbaf63d3fd07",
+            "label": "Content Wrapper",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5bbaf63d3fd9c",
+            "label": "Content",
+            "name": "ctnt",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_key": "group_5bbaf11de8898",
+            "repeatable": 0,
+            "layout": "block",
+            "button_label": "",
+            "appearances": "",
+            "min": null,
+            "max": null,
+            "collapsed": "",
+            "sub_fields": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539399727
+}

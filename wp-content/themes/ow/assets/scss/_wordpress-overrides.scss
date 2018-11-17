@@ -1,0 +1,17 @@
+/* ========================================================================== */
+/* Wordpress Overrides */
+/* =================== */
+
+.page-content, 
+.entry-content, 
+.entry-summary,
+.hentry {
+    margin: 0;
+}
+.site-content {
+	padding-top: $ow-header-height-mobile;
+
+	@include tablet_ls {
+		padding-top: $ow-header-height-desktop;
+	}
+}

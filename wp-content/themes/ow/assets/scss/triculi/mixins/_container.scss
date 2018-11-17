@@ -1,0 +1,58 @@
+@mixin no_space {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin fill_parent {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+@mixin max_width($w: 1280px) {
+    max-width: $w;
+    margin: 0 auto;
+}
+
+@mixin empty_content {
+    content: " ";
+    display: table;
+}
+
+@mixin appearance_type($type: none) { /* normal|icon|window|button|menu|field */
+    -webkit-appearance: $type;
+       -moz-appearance: $type;
+        -ms-appearance: $type;
+         -o-appearance: $type;
+            appearance: $type;    
+}
+
+@mixin clearfix {
+    clear: both;
+
+    &:before,
+    &:after {
+        @include empty_content;        
+    }
+    &:after {
+        clear: both;
+    } 
+}
+
+@mixin column_count($count) {
+    -webkit-column-count: $count;
+       -moz-column-count: $count;
+            column-count: $count;
+}
+
+@mixin column_gap($px) {
+    -webkit-column-gap: $px;
+       -moz-column-gap: $px;
+            column-gap: $px;
+}
+
+@mixin column_fill($val: auto) {
+    -webkit-column-fill: $val;
+       -moz-column-fill: $val;
+            column-fill: $val;
+}

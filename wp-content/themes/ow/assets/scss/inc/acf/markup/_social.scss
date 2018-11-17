@@ -1,0 +1,22 @@
+/* ========================================================================== */
+/* ACF: Markup: Social Media */
+/* ========================= */
+
+.ow-social-media {
+
+	ul {
+		text-align: center;
+
+		li {
+			display: inline-block;
+			padding: 0;
+
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+			a {
+				font-size: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+/* ========================================================================== */
+/* ACF: Markup: Image */
+/* ================== */
+
+.ow-wrap-mrkp-img {
+    @include fill_parent;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 0;
+    padding: 0;
+
+    .ow-mrkp-img {
+        @include fill_parent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        &.ow-desktop {
+            display: none;
+        }
+        @include tablet_ls {
+
+            &.ow-mobile {
+                display: none;
+            }
+            &.ow-desktop {
+                display: block;
+            }
+        }
+    }
+}

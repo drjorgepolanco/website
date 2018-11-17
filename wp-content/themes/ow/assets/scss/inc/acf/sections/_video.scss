@@ -1,0 +1,30 @@
+/* ========================================================================== */
+/* Section: Video */
+/* ============== */
+
+.ow-sctn-video {
+	
+    &.ow-static {
+    	height: 100vh;
+
+        .ow-video-fill {
+            
+            video,
+            iframe {
+                @include translate_y(0);
+                position: relative;
+                top: 0;           
+            }
+            .ow-video-height {
+                height: 100%;
+            }
+        }
+    }
+    .ow-wrap-sctn {
+        margin: 0 auto;
+    }
+    .ow-wrap-video {
+    	height: 100%;
+        margin: 0 auto;
+    }
+}

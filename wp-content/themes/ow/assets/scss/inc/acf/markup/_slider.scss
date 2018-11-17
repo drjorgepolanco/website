@@ -1,0 +1,87 @@
+/* ========================================================================== */
+/* ACF: Markup: Slider */
+/* =================== */
+
+.ow-slider {
+    @include fill_parent;
+
+    .ow-title {
+        @include align_x;
+        z-index: 2;
+        top: 25%;
+    }
+
+    /* List of Slides */
+    ul {
+        @include fill_parent;
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Each individual Slide */
+    .ow-slide {
+        @include fill_parent;
+        background-repeat: no-repeat;
+        float: left;
+        transition: opacity 0.5s linear;
+        z-index: 0;
+        opacity: 0;
+        position: absolute;
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-position: center;
+        background-size: cover;
+
+        &.active {
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+
+    /* Controls */
+    /* -------- */
+    a.ow-control {
+        @include align_y;
+        position: absolute;
+        transition: $ow-transition;
+        z-index: 2;
+        cursor: pointer;
+        font-size: 36px;
+        height: 100px;
+        width: 30px;
+
+        .ow-wrap-icon {
+            color: white;
+            height: 100%;
+            width: 100%;
+
+            span,
+            i {
+                @include align_xy;
+            }
+        }
+        &.ow-next {
+            right: 0;
+        }
+        &.ow-prev {
+            left: 0;
+        }
+        &:hover {
+            background: rgba(42, 42, 42, 0.4);
+        }
+        @include laptop {
+            height: 100px;
+            width: 50px;
+
+            .ow-wrap-icon {
+
+                span,
+                i {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}

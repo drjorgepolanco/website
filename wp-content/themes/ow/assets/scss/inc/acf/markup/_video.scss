@@ -1,0 +1,48 @@
+/* ========================================================================== */
+/* ACF: Markup: Video */
+/* ================== */
+
+video, iframe {
+    @include fill_parent;
+    padding: 0;
+    background: black;
+}
+
+/* Play Button */
+.ow-video-play-btn {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+
+    .fa, .fas, .fab {
+        @include align_xy;
+        color: $youtube-red;
+        font-size: 64px;
+    }
+}
+
+/* Section Video */
+/* ------------- */
+
+/* The video fills the section */
+.ow-video-fill {
+    @include fill_parent;
+    background: black;
+    
+    .ow-video-height {
+        height: 100%;
+    }
+    video,
+    iframe {
+        @include align_y;
+        @include fill_parent;
+    }
+}
+
+/* 
+The video doesn't fill the section. Instead the user decides it's width and
+the height becomes 0.5625% of the chosen width. Aspect Ratio 16:9 */
+.ow-video-fill-not {
+    margin: 0 auto;
+}

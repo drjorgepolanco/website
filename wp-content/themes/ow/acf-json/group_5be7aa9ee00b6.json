@@ -1,0 +1,108 @@
+{
+    "key": "group_5be7aa9ee00b6",
+    "title": "Markup: Grid: Image",
+    "fields": [
+        {
+            "key": "field_5be7b8c7d18a9",
+            "label": "Settings",
+            "name": "set",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_key": "group_5be7ab861cf6f",
+            "repeatable": 0,
+            "layout": "block",
+            "button_label": "",
+            "appearances": "",
+            "min": null,
+            "max": null,
+            "collapsed": "",
+            "sub_fields": []
+        },
+        {
+            "key": "field_5be8d81d4f576",
+            "label": "Show Content",
+            "name": "show_ctnt",
+            "type": "true_false",
+            "instructions": "<strong><span style=\"color: green;\">Check this Box to use Image Meta Data as Content to show below the Image in the frontend.<\/span><\/strong>\r\n<br>\r\n<span style=\"color: red;\">Click on an Individual Image to update its content.<\/span>\r\n<br>\r\n<p>Font sizes are calculated automatically in relation to screen width.<\/p>\r\n<p>\r\n\t<strong>&bull; Pretitle:<\/strong> Alt Text\r\n\t<br>\r\n\t<strong>&bull; Title:<\/strong> Title\r\n\t<br>\r\n\t<strong>&bull; Subtitle:<\/strong> Caption\r\n\t<br>\r\n    <strong>&bull; Description:<\/strong> Description\r\n<\/p>\r\n<span style=\"color:red;\"><strong>Avoid other options with this type of content.<\/strong><\/span>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5be7aa9eed90e",
+            "label": "Images",
+            "name": "images",
+            "type": "gallery",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5be7aa9ef27e1",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1541990335
+}

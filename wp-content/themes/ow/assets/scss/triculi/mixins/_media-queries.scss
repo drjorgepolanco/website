@@ -1,0 +1,80 @@
+/* Media Query */
+@mixin media_query($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+
+/* Modern Phone: iPhone 6, 7 */
+@mixin phone_lg {
+    @media only screen and (min-width: 375px) {
+        @content;
+    }
+}
+
+
+/* Phablet: iPhone 6 Plus, large screen phones */
+@mixin phablet {
+    @media only screen and (min-width: 414px) {
+        @content;
+    }
+}
+
+
+/* Tablet Portrait */
+@mixin tablet_pt {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+
+/* Tablet Landscape */
+@mixin tablet_ls {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+
+/* Laptop */
+@mixin laptop {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+
+/* Laptop Wide */
+@mixin laptop_wide {
+    @media only screen and (min-width: 1366px) {
+        @content;
+    }
+}
+
+
+/* Desktop */
+@mixin desktop {
+    @media only screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+
+/* HD */
+@mixin hd {
+    @media only screen and (min-width: 1920px) {
+        @content;
+    }
+}
+
+
+/* Retina */
+@mixin retina {
+    @media only screen and (min-width: 2560px) {
+        @content;
+    }
+}
+
+

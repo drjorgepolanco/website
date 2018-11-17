@@ -1,0 +1,139 @@
+/* ========================================================================== */
+/* All Sections */
+/* ============ */
+
+.ow-sctn {
+    background: transparent;
+    
+    .ow-wrap-sctn {
+        @include fill_parent;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0;
+        background: transparent;
+    }
+
+    /* Float from Tablet and Up */
+    @include tablet_ls {
+
+        .ow-align-l {
+            float: left;
+        }
+        .ow-align-r {
+            float: right;
+        }
+    }
+    &.ow-stc {
+        
+        .ow-ctnt-pos {
+            position: absolute;
+            z-index: 1;
+        }
+
+        /* When position in all axis matters */
+        .ow-ctnt-left-top {
+            left: 0;
+            top: 0;
+            right: auto;
+            bottom: auto;
+        }
+        .ow-ctnt-left-center {
+            @include align_y;
+            left: 0;
+            right: auto;
+        }
+        .ow-ctnt-left-bottom {
+            left: 0;
+            bottom: 0;
+            right: auto;
+            top: auto;
+        }
+        .ow-ctnt-center-top {
+            @include align_x;
+            top: 0;
+        }
+        .ow-ctnt-center-center {
+            @include align_xy;
+        }
+        .ow-ctnt-center-bottom {
+            @include align_x;
+            bottom: 0;
+            top: auto;
+        }
+        .ow-ctnt-right-top {
+            right: 0;
+            top: 0;
+            left: auto;
+            bottom: auto;
+        }
+        .ow-ctnt-right-center {
+            @include align_y;
+            right: 0;
+            left: auto;
+        }
+        .ow-ctnt-right-bottom {
+            right: 0;
+            bottom: 0;
+            top: auto;
+            left: auto;
+        }
+
+        /* When only vertical position matters */
+        .ow-ctnt-top {
+            top: 0;
+        }
+        .ow-ctnt-center {
+            @include align_y;
+        }
+        .ow-ctnt-bottom {
+            bottom: 0;
+        }
+
+        /* Full Screen sctn with 3 subsctns */
+        .ow-sctn-vertical {
+            
+            .ow-ctnt-ctnr {
+                width: 100%;
+            }
+        }
+        .ow-sctn-top {
+            height: 40vh;
+            box-sizing: border-box;
+        }
+        .ow-sctn-bottom {
+            height: 60vh;
+            box-sizing: border-box;
+        }
+
+        /* sctn Height */
+        @media only screen and (max-width: 1023px) {
+            height: calc(100vh - 60px) !important;
+        }
+        @include tablet_ls {
+            &.ow-height-qt-one   { height: calc( 25vh      - 80px) !important; }
+            &.ow-height-td-one   { height: calc( 33.3333vh - 80px) !important; }
+            &.ow-height-qt-two   { height: calc( 50vh      - 80px) !important; }
+            &.ow-height-td-two   { height: calc( 66.6666vh - 80px) !important; }
+            &.ow-height-qt-three { height: calc( 75vh      - 80px) !important; }
+            &.ow-height-qt-four  { height: calc(100vh      - 80px) !important; }
+        }
+    }
+    &.ow-dyc {
+        
+        .ow-ctnt-pos {
+            position: relative;
+        }
+        @include tablet_ls {
+
+            .ow-ctnt-left {
+                float: left;
+            }
+            .ow-ctnt-center {
+                margin: 0 auto;
+            }
+            .ow-ctnt-right {
+                float: right;
+            }
+        }   
+    }
+}

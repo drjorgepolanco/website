@@ -1,0 +1,76 @@
+#poststuff {
+	min-width: 100% !important;
+	
+	#post-body.columns-2 {
+		margin: 0;
+
+		#side-sortables {
+			width: 100%;
+			min-height: auto;
+		}
+		#postbox-container-1 {
+			float: left;
+			margin: 0;
+			width: 100%;	
+			
+			@media only screen and (min-width: 1280px) {
+				float: right;
+				width: 300px;				
+			}
+		}
+	}
+}
+@media only screen and (min-width: 1280px) {
+
+	#post-body-content,
+	#poststuff .postbox-container {
+		width: calc(100% - 320px);
+		float: left;
+	}
+}
+
+
+
+
+
+/* ACF */
+/* === */
+
+/* Wrapper of Range (number) */
+.acf-range-wrap {
+
+	input[type="number"] {
+		min-width: 60px;
+	}
+}
+
+/* Repeater Field */
+.acf-repeater {
+
+	.acf-row {
+
+		.acf-row-handle {
+
+			span {
+				color: white !important;
+				font-weight: bold;
+			}			
+		}
+
+		&:nth-of-type(odd) {
+			
+			.acf-row-handle {
+				background: #999 !important;
+			}
+		}
+		&:nth-of-type(even) {
+			
+			.acf-row-handle {
+				background: #666 !important;			
+			}
+			.acf-fields {
+				background: #F8F8F8;
+			}
+		}
+	}
+}

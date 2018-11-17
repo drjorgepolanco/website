@@ -1,0 +1,113 @@
+{
+    "key": "group_5bb26b23ac3e7",
+    "title": "Prop: Max Width",
+    "fields": [
+        {
+            "key": "field_5bb26b781190e",
+            "label": "Unit",
+            "name": "unit",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "px": "px",
+                "pct": "%"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "pct",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5bb26bd11190f",
+            "label": "Value",
+            "name": "px",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb26b781190e",
+                        "operator": "==",
+                        "value": "px"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1280,
+            "min": 320,
+            "max": 1920,
+            "step": 16,
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_5bb26c1d11910",
+            "label": "Value",
+            "name": "pct",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb26b781190e",
+                        "operator": "==",
+                        "value": "pct"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": 50,
+            "max": 100,
+            "step": 5,
+            "prepend": "",
+            "append": "%"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539400781
+}

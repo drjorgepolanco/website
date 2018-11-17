@@ -1,0 +1,166 @@
+{
+    "key": "group_5ba97ef8ddc5f",
+    "title": "Markup: Video: Source",
+    "fields": [
+        {
+            "key": "field_5ba98147fd2a2",
+            "label": "Format",
+            "name": "fmt",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mov": "mov",
+                "mp4": "mp4",
+                "ogg": "ogg",
+                "webm": "webm",
+                "youtube": "youtube",
+                "vimeo": "vimeo"
+            },
+            "default_value": [
+                "youtube"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ba98182fd2a3",
+            "label": "Youtube",
+            "name": "yt",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ba98147fd2a2",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "vKPir0l0cx0",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ba981affd2a4",
+            "label": "Vimeo",
+            "name": "vim",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ba98147fd2a2",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 116046838,
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ba981c6fd2a5",
+            "label": "Raw",
+            "name": "raw",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ba98147fd2a2",
+                        "operator": "==",
+                        "value": "mov"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ba98147fd2a2",
+                        "operator": "==",
+                        "value": "mp4"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ba98147fd2a2",
+                        "operator": "==",
+                        "value": "ogg"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5ba98147fd2a2",
+                        "operator": "==",
+                        "value": "webm"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/www.the-source-of-the-video.com\/",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539400490
+}

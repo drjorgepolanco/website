@@ -1,0 +1,9 @@
+@mixin basic_link {
+    @include fill_parent;
+    transition: 0.3s;
+}
+
+@mixin smooth_font {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

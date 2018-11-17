@@ -1,0 +1,236 @@
+/* ========================================================================== */
+/* ACF: Content: Grid */
+/* ================== */
+
+// Local Mixins
+@mixin ow_calc_grid_item_width_fixed($mw) {
+
+    @media only screen and (min-width: #{$mw}px) {
+        width: #{$mw}px;
+    }
+}
+@mixin ow_calc_grid_item_width_fluid($mw, $w) {
+
+    @media only screen and (min-width:  #{$mw}px) {
+
+        .ow-grid-item {
+            width: calc(#{$w}%);
+        }
+    }
+}
+
+
+
+/* Masonry */
+/* In Masonry Grids the height of the items is decided with Javascript in relation to the CMS Video Property "Ratio" */
+
+
+/* Static Height */
+.ow-grid-static-height {
+	
+	.ow-video-height {
+		height: 100%;
+	}
+}
+
+
+
+// Used in Image and Media Galleries
+.ow-wrap-grid {
+    margin: 0;
+
+    /* button-group */
+    .ow-btn-group {
+        padding: 0 16px 32px;
+        margin: 0 auto;
+        max-width: 1280px;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;            
+        }
+        /* button */
+        .ow-btn {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background-color: #F8F8F8;
+            background-image: linear-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.1));
+            border: 1px solid #CFCFCF;
+            max-width: 300px;
+            float: none;
+            border-radius: 5px;
+            margin: 8px auto;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+            color: #666;
+            
+            &:hover,
+            &:active,
+            &.is-checked,
+            &.is-selected {      
+                box-shadow: $ow-shadow-box;
+                background: white;
+                position: relative;
+                // top: -1px;
+                color: $ow-black;
+            }
+            &.ow-shadow {
+                box-shadow: $ow-shadow-box;
+
+                &:hover,
+                &:active,
+                &.is-checked,
+                &.is-selected {   
+                    box-shadow: none;
+                    // top: 1px;
+                }
+            }
+            input[type="radio"] { 
+                display: none; 
+            } 
+            @include tablet_pt {
+                display: inline-block;
+                max-width: 100%;
+                float: left;
+                margin: 0;
+                border-radius: 0;
+
+                &:first-child {
+                    border-radius: 5px 0 0 5px;
+                }   
+                &:last-child {
+                    border-radius: 0 5px 5px 0;
+                }  
+            }
+        }
+    }
+}
+
+/* The Grid */
+.ow-grid {
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;        
+    }  
+    &.ow-fixed {
+        width: 320px;
+        @include ow_calc_grid_item_width_fixed(640);
+        @include ow_calc_grid_item_width_fixed(960);
+        @include ow_calc_grid_item_width_fixed(1280);
+        @include ow_calc_grid_item_width_fixed(1600);
+        @include ow_calc_grid_item_width_fixed(1920);
+        @include ow_calc_grid_item_width_fixed(2240);
+
+        .ow-grid-item {
+            width: 320px;
+        }
+    }
+    &.ow-fluid {
+        width: 100%;
+
+        .ow-grid-item {
+            width: calc(100%);
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;                   
+        } 
+        &.ow-row-items-2 {
+            @include ow_calc_grid_item_width_fluid(640, 50);
+        } 
+        &.ow-row-items-3 {
+            @include ow_calc_grid_item_width_fluid(640, 50);
+            @include ow_calc_grid_item_width_fluid(840, 33.3333);
+        } 
+        &.ow-row-items-4 {
+            @include ow_calc_grid_item_width_fluid(640, 50);
+            @include ow_calc_grid_item_width_fluid(840, 33.3333);
+            @include ow_calc_grid_item_width_fluid(1200, 25);
+        } 
+        &.ow-row-items-5 {
+            @include ow_calc_grid_item_width_fluid(640, 50);
+            @include ow_calc_grid_item_width_fluid(840, 33.3333);
+            @include ow_calc_grid_item_width_fluid(1200, 25);
+            @include ow_calc_grid_item_width_fluid(1680, 20);
+        }
+        &.ow-row-items-6 {
+            @include ow_calc_grid_item_width_fluid(640, 50);
+            @include ow_calc_grid_item_width_fluid(840, 33.3333);
+            @include ow_calc_grid_item_width_fluid(1200, 25);
+            @include ow_calc_grid_item_width_fluid(1680, 20);
+            @include ow_calc_grid_item_width_fluid(2240, 16.6667);
+        }   
+    }
+}
+
+.ow-grid-item {
+    position: absolute;
+    
+    /* <a> that wraps img or video and body */
+    .ow-wrap-link {
+        background: $ow-bg;
+        overflow: hidden;
+        transition: box-shadow .3s;
+
+        &:hover {
+            box-shadow: $ow-shadow-box;
+        }
+        &.ow-shadow {
+            box-shadow: $ow-shadow-box;
+
+            &:hover {
+                box-shadow: none;
+                border: 1px solid #CFCFCF;
+            }
+        }
+        a {
+            display: block;
+            width: 100%;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    
+    /* Image */
+    .ow-wrap-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: block;
+    }
+    /* Masonry */
+    .ow-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    /* Static Height */
+    .ow-bg-img {
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    /* Text */
+    .ow-wrap-mrkp-ctnt {
+        text-align: left;
+        padding: 12px;
+        display: block;
+
+        h1, h2, h3, h4, h5, h6, p, li {
+            padding: 6px 0;
+        }
+    }
+}

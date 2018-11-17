@@ -1,0 +1,25 @@
+/* Fonts */
+/* ===== */
+
+/* Source Sans Pro */
+@font-face {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Spectral */
+@font-face {
+  font-family: 'Spectral', serif;
+}
+
+@font-face {
+    font-family: 'Play Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./assets/fonts/play-regular/play-regular.eot');
+    src: url('./assets/fonts/play-regular/play-regular.eot?#iefix') format('embedded-opentype'),  
+         url('./assets/fonts/play-regular/play-regular.woff2')      format('woff2'),  
+         url('./assets/fonts/play-regular/play-regular.woff')       format('woff'),  
+         url('./assets/fonts/play-regular/play-regular.ttf')        format('truetype'),  
+         url('./assets/fonts/play-regular/play-regular.otf')        format('opentype'),  
+         url('./assets/fonts/play-regular/play-regular.svg')        format('svg');
+}

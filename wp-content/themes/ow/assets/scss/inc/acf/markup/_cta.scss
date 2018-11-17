@@ -1,0 +1,38 @@
+/* ========================================================================== */
+/* ACF: Markup: CTA */
+/* ================ */
+
+.ow-cta {
+    transition: all $ow-transition ease;
+    width: auto;
+    display: inline-table;
+    -webkit-filter: brightness(100%);
+    background: #CCC;
+    padding: 12px 24px;
+    border: none;
+    box-shadow: none;
+    border-radius: 24px;
+
+    .ow-text {
+        text-align: center;
+        display: block;
+        font-size: 16px;
+        color: #000;
+    }
+}
+.ow-wrap-cta {
+    
+    &.ow-pos {
+        display: block;
+
+        &.ow-left {
+            text-align: left;
+        }
+        &.ow-center {
+            text-align: center;
+        }
+        &.ow-right {
+            text-align: right;
+        }
+    }
+}

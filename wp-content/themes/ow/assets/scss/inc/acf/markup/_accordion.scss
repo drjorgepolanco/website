@@ -1,0 +1,78 @@
+/* ========================================================================== */
+/* ACF: Content: Accordion */
+/* ======================= */
+
+.ow-accn {
+	padding: 0;
+
+	/* <a> */
+	.ow-trigger {
+		display: block;
+		width: 100%;
+	}
+	.ow-wrap-text {
+		display: block;
+	}
+
+	/* <span> Wrapper of Icon */
+	.ow-wrap-icon {
+		@include align_y;
+		display: block;
+		width: 50px;
+		height: 50px;
+	}
+	.ow-icon {
+		@include align_y;
+		right: 0;
+		transition: all 0.3s;
+
+		&.ow-active {
+			visibility: hidden;
+			opacity: 0;			
+		}
+		&.ow-passive {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	&.active {
+	
+		.ow-icon {
+
+			&.ow-active {
+				visibility: visible;
+				opacity: 1;			
+			}
+			&.ow-passive {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+	}
+	.ow-ctnt {
+		display: none;
+	}
+	&.ow-pos {
+
+		&.ow-right {
+			
+			.ow-wrap-text {
+				padding-right: 32px;
+			}
+			.ow-wrap-icon,
+			.ow-icon {
+				right: 0;
+			}
+		}
+		&.ow-left {
+
+			.ow-wrap-text {
+				padding-left: 32px;
+			}
+			.ow-wrap-icon,
+			.ow-icon {
+				left: 0;
+			}
+		}
+	}
+}

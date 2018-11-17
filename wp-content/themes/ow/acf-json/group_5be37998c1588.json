@@ -1,0 +1,79 @@
+{
+    "key": "group_5be37998c1588",
+    "title": "Markup: Content",
+    "fields": [
+        {
+            "key": "field_5be37fd8d7f93",
+            "label": "Show",
+            "name": "show",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5be379a7f423f",
+            "label": "Editor",
+            "name": "editor",
+            "type": "wysiwyg",
+            "instructions": "<p>Font sizes are calculated automatically in relation to screen width.<\/p>\r\n<p>\r\n\t<strong>&bull; Pretitle:<\/strong> Heading 4 or 5\r\n\t<br>\r\n\t<strong>&bull; Title:<\/strong> Heading 2 or 3\r\n\t<br>\r\n\t<strong>&bull; Subtitle:<\/strong> Heading 3 or 4\r\n\t<br>\r\n    <strong>&bull; Description:<\/strong> Paragraph\r\n<\/p>\r\n<span style=\"color:red;\"><strong>Avoid other options with this type of content.<\/strong><\/span>\r\n<br>\r\n<span style=\"color:blue;\"><strong>Use Shift + Enter to insert line break without creating a new paragraph.<\/strong><\/span>",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5be37fd8d7f93",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1541978571
+}

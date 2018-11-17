@@ -1,0 +1,62 @@
+{
+    "key": "group_5ba9c56683117",
+    "title": "Markup: Video: Prop: Ratio",
+    "fields": [
+        {
+            "key": "field_5ba9c576be2b7",
+            "label": "Ratio",
+            "name": "mrkp_video_prop_ratio",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hd": "HD (16:9)",
+                "standard": "Standard (4:3)",
+                "classic": "Classic Film (3:2)",
+                "cinemascope": "Cinemascope (21:9)"
+            },
+            "default_value": [
+                "hd"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539400479
+}

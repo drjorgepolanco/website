@@ -1,0 +1,55 @@
+{
+    "key": "group_5bb8327a228c3",
+    "title": "Prop: Align",
+    "fields": [
+        {
+            "key": "field_5bb83285a5196",
+            "label": "Align for Desktop",
+            "name": "prop_align",
+            "type": "button_group",
+            "instructions": "<p>\r\n<strong>Mobile:<\/strong> <span style=\"color:red;\">ONE<\/span> shows first than <span style=\"color:red;\">TWO<\/span>. Width 100%.\r\n<br>\r\n<strong>Desktop:<\/strong> Choose Alignment.\r\n<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Align Left",
+                "right": "Align Right"
+            },
+            "allow_null": 0,
+            "default_value": "left",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1539400508
+}

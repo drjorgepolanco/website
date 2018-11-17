@@ -1,0 +1,48 @@
+/*\
+ *
+ * triculi v1.5 | NO LICENSE - FREE | github.com/drjorgepolanco
+ * Created on: 	09/19/2017
+ * Last Updated:
+ * 				08/12/2018 - change base/typography to use Fluid Type from css-tricks.com/snippets/css/fluid-typography/
+ *				09/18/2018 - add random mixins: reset_css and reset_align
+ * 
+ *
+\*/
+
+/* Mixins */
+@import 'mixins/random';
+@import 'mixins/media-queries';
+@import 'mixins/container';
+@import 'mixins/transform';
+@import 'mixins/media';
+@import 'mixins/spacing';
+@import 'mixins/positioning';
+@import 'mixins/device';
+@import 'mixins/inline';
+@import 'mixins/lists';
+
+/* Typography */
+@import 'base/typography';
+
+/* Tags */
+@import 'base/tags';
+
+
+/* Helper Classes */
+@import 'classes/container';
+@import 'classes/spacing';
+@import 'classes/positioning';
+@import 'classes/structure';
+
+
+/* Devices */
+// Import only the ones you need
+@import 'devices/phone';                //  320px
+@import 'devices/phablet';              //  414px
+@import 'devices/tablet-portrait';      //  768px .tablet-pt
+@import 'devices/tablet-landscape';     // 1024px .tablet-ls
+@import 'devices/laptop';               // 1280px
+@import 'devices/laptop-wide';          // 1366px
+@import 'devices/desktop';              // 1440px
+@import 'devices/hd';                   // 1920px
+@import 'devices/retina';               // 2560px

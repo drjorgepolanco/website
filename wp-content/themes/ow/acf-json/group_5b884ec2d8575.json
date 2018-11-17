@@ -1,0 +1,85 @@
+{
+    "key": "group_5b884ec2d8575",
+    "title": "Markup: Video: Dynamic",
+    "fields": [
+        {
+            "key": "field_5b8f4f9df3071",
+            "label": "Ratio",
+            "name": "ratio",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_key": "group_5ba9c56683117",
+            "repeatable": 0,
+            "layout": "block",
+            "button_label": "",
+            "appearances": [
+                "hide-outer-boundary",
+                "hide-outer-label"
+            ],
+            "min": null,
+            "max": null,
+            "collapsed": "",
+            "sub_fields": []
+        },
+        {
+            "key": "field_5ba984e2cae43",
+            "label": "Video",
+            "name": "video",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_key": "group_5ba97ef8ddc5f",
+            "repeatable": 0,
+            "layout": "block",
+            "button_label": "",
+            "appearances": [
+                "hide-outer-boundary",
+                "hide-outer-label"
+            ],
+            "min": null,
+            "max": null,
+            "collapsed": "",
+            "sub_fields": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1540940969
+}

@@ -1,0 +1,4 @@
+/* hd (1920px) */
+@media only screen and (min-width: 1920px) {
+    @include device(hd);
+}

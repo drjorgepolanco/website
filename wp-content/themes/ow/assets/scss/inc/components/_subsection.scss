@@ -1,0 +1,47 @@
+/* ========================================================================== */
+/* ACF: Markup: Subsection */
+/* ======================= */
+
+.ow-wrap-subsctn {
+    height: 100%;
+
+    .ow-subsctn {
+        @include fill_parent;
+    }
+    .ow-wrap-mrkp-ctnt {
+        @include fill_parent;
+        margin: 0 auto;
+    }
+    .ow-wrap-mrkp-ctnt-set {
+        display: table;
+        
+        img {
+            display: block;
+        }
+        @media only screen and (max-width: 1023px) {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+    }
+    .ow-mrkp-ctnt-bg,
+    .ow-mrkp-ctnt-body {
+        @include fill_parent;
+    }
+    .ow-mrkp-ctnt-bg {
+        position: absolute;
+        z-index: 0;
+    }
+    .ow-mrkp-ctnt-body {
+        position: relative;
+    }
+    .ow-wrap-icon {
+
+        img {
+            margin: 0 auto;
+            display: block;
+            width: 64px;
+        }
+    }
+}
+
+

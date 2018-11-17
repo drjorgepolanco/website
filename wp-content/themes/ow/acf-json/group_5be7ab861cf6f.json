@@ -1,0 +1,511 @@
+{
+    "key": "group_5be7ab861cf6f",
+    "title": "Markup: Grid: Settings",
+    "fields": [
+        {
+            "key": "field_5be7ab862565a",
+            "label": "Name",
+            "name": "name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Unique name separated with dashes. Eg. the-name-1",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5be7ab86256f4",
+            "label": "Type",
+            "name": "type",
+            "type": "select",
+            "instructions": "<p>\r\n\t<strong><span style=\"color: blue;\">Masonry: Fixed<\/span><\/strong> - <strong>Height:<\/strong> Auto | <strong>Width:<\/strong> Fixed: 320px\r\n\t<br>\r\n\t<strong><span style=\"color: blue;\">Masonry: Fluid<\/span><\/strong> - <strong>Height:<\/strong> Auto | <strong>Width:<\/strong> Auto in relation to Container Max Width\r\n\t<br>\r\n\t<strong><span style=\"color: blue;\">Static Height<\/span><\/strong> - <strong>Height:<\/strong> Manual | <strong>Width:<\/strong> Auto in relation to Container Max Width\r\n<\/p>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "masonry-fixed": "Masonry: Fixed",
+                "masonry-fluid": "Masonry: Fluid",
+                "static-height": "Static Height"
+            },
+            "default_value": [
+                "masonry-fixed"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5be7ab8625785",
+            "label": "Container",
+            "name": "ctnr",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5be7ab86256f4",
+                        "operator": "==",
+                        "value": "masonry-fluid"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5be7ab86256f4",
+                        "operator": "==",
+                        "value": "static-height"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5be7ab862cc04",
+                    "label": "Max Width",
+                    "name": "mw",
+                    "type": "select",
+                    "instructions": "More width = more items per row",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "masonry-fluid"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "768px": "768px",
+                        "960px": "960px",
+                        "1280px": "1280px",
+                        "1920px": "1920px",
+                        "100%": "100%"
+                    },
+                    "default_value": [
+                        "100%"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5be7ab862cc9f",
+                    "label": "Items Per Row",
+                    "name": "items_xs",
+                    "type": "select",
+                    "instructions": "Choose max items per row.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "masonry-fluid"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "768px"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "768px"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "row-items-1": "1",
+                        "row-items-2": "2"
+                    },
+                    "default_value": [
+                        "row-items-2"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5be7ab862cd2f",
+                    "label": "Items Per Row",
+                    "name": "items_sm",
+                    "type": "select",
+                    "instructions": "Choose max items per row.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "masonry-fluid"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "960px"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "960px"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "row-items-1": "1",
+                        "row-items-2": "2",
+                        "row-items-3": "3"
+                    },
+                    "default_value": [
+                        "row-items-3"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5be7ab862cdbe",
+                    "label": "Items Per Row",
+                    "name": "items_md",
+                    "type": "select",
+                    "instructions": "Choose max items per row.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "masonry-fluid"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "1280px"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "1280px"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "row-items-1": "1",
+                        "row-items-2": "2",
+                        "row-items-3": "3",
+                        "row-items-4": "4"
+                    },
+                    "default_value": [
+                        "row-items-4"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5be7ab862ce50",
+                    "label": "Items Per Row",
+                    "name": "items_lg",
+                    "type": "select",
+                    "instructions": "Choose max items per row.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "masonry-fluid"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "1920px"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "1920px"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "row-items-1": "1",
+                        "row-items-2": "2",
+                        "row-items-3": "3",
+                        "row-items-4": "4",
+                        "row-items-5": "5"
+                    },
+                    "default_value": [
+                        "row-items-5"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5be7ab862cee6",
+                    "label": "Items Per Row",
+                    "name": "items_xl",
+                    "type": "select",
+                    "instructions": "Choose max items per row.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "masonry-fluid"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "100%"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            },
+                            {
+                                "field": "field_5be7ab862cc04",
+                                "operator": "==",
+                                "value": "100%"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "row-items-1": "1",
+                        "row-items-2": "2",
+                        "row-items-3": "3",
+                        "row-items-4": "4",
+                        "row-items-5": "5",
+                        "row-items-6": "6"
+                    },
+                    "default_value": [
+                        "row-items-6"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5be7ab8625811",
+            "label": "Item",
+            "name": "item",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5be7ab863c6e7",
+                    "label": "Gutter",
+                    "name": "gutter",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 8,
+                    "min": "",
+                    "max": 32,
+                    "step": 2,
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_5be7ab863c76e",
+                    "label": "Shadow",
+                    "name": "shadow",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5be7ab863c7f0",
+                    "label": "Height",
+                    "name": "height",
+                    "type": "range",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5be7ab86256f4",
+                                "operator": "==",
+                                "value": "static-height"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 320,
+                    "min": 32,
+                    "max": 640,
+                    "step": 4,
+                    "prepend": "",
+                    "append": "px"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "is_acf_component": 1,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1541914502
+}

@@ -1,0 +1,56 @@
+/* Text */
+.text-center { 
+    text-align: center; 
+}
+.text-right { 
+    text-align: right; 
+}
+.text-left  { 
+    text-align: left; 
+}
+
+
+/* Image */
+.img-center {
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Float */
+.float-left { 
+    float: left  !important; 
+}
+.float-right { 
+    float: right !important; 
+}
+.float-none {
+    float: none !important;
+}
+
+
+/* Position */
+.position-left { 
+    left: 0; 
+}
+.position-right { 
+    right: 0; 
+}
+
+/* Absolute Align */
+/* Parent is .inner */
+.align-y {
+    @include translate_y(-50%);
+    position: absolute !important;
+    top: 50%;
+}
+.align-x {
+    @include translate_x(-50%);
+    position: absolute !important;
+    left: 50%;
+}
+.align-xy {
+    @include translate_xy(-50%, -50%);
+    position: absolute !important;
+    top: 50%; left: 50%;
+}

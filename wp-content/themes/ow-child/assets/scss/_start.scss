@@ -1,0 +1,196 @@
+/* ========================================================================== */
+/* Base: General Styles */
+/* ==================== */
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $play;
+}
+p {
+	font-family: $source-sans;
+}
+
+/* Header */
+.site-header {
+
+	.ow-logo {
+		width: 50px;
+		height: 50px;
+
+		@include tablet_ls {
+			width: 64px;
+			height: 64px;
+		}
+	}
+	.ow-social-media {
+
+		i {
+			font-size: 24px;
+		}
+	}
+	a {
+		color: black;
+	}
+	.ow-wrap-nav {
+
+		.ow-nav, 
+		.ow-social-media {
+			padding: 32px 0;
+		}
+	}
+	@include tablet_ls {
+		
+		.ow-social-media {
+			@include align_y;
+			right: 20px;
+
+			ul {
+
+				li {
+					margin: 0;
+				}
+			}
+		}
+		.ow-wrap-nav {
+		    
+		    .ow-nav.ow-primary {
+	    		@include align_xy;
+	    		padding: 0;
+	    	}
+	    	li {
+	    		padding: 0 16px;
+	    	}
+		}
+	}
+}
+.entry-content {
+	background: white;
+}
+.sctn-hero {
+	background: #F9F9F9;
+
+	h1, h2, h3, h4, h5, h6, p {
+		font-family: $play;
+		padding: 0 !important;
+	}
+	h1 {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	@include tablet_ls {
+
+		h1 {
+			font-size: 60px;
+		}
+	}
+}
+.sctn-header {
+
+	.ow-wrap-sctn {
+		padding: 64px 32px 32px;
+	}
+}
+.sctn-portfolio {
+
+	.ow-grid-item {
+		
+		.ow-shadow {
+			box-shadow: 0px 4px 10px rgba(51, 51, 51, 0.5);
+		}
+		.ow-wrap-mrkp-ctnt {
+			background: $ow-black;
+			padding: 12px 24px;
+
+			h4, p {
+				font-family: $source-sans;
+			}
+			h4 {
+				color: #f0f0f0;
+			}
+			p {
+				color: #666;
+			}
+		}
+	}
+	.ow-wrap-sctn {
+		padding-bottom: 64px;
+	}
+}
+.sctn-contact {
+	background: $ow-black;
+
+	.ow-wrap-cta {
+		padding: 64px;
+
+		.ow-cta {
+			background: white;
+			color: $ow-black;
+		}
+	}
+}
+
+.site-footer {
+	background: white;
+	
+	.ow-primary,
+	.ow-copyright {
+		padding: 32px;
+	}
+	ul {
+		list-style: none;
+
+		li {
+
+			a {
+				color: $ow-black;
+			}
+		}
+	}
+	.ow-copyright {
+
+		p {
+			color: $ow-black;
+			font-size: 14px;
+			text-align: center;
+		}
+	}
+	.ow-wrap-back-to-top {
+		background: $ow-black;
+
+		a {
+			display: block;
+			padding: 32px 0;
+			color: white;
+			text-align: center
+		}
+	}
+
+	@include tablet_pt {
+			
+		ul {
+			text-align: center;
+
+			li {
+				display: inline-block;
+				padding: 0 16px;
+			}
+		}
+	}
+}
+
+#wpadminbar {
+	display: none;
+}
+
+
+
+/* Particles */
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.particles-js {
+  position: relative;
+}
+

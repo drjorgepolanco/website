@@ -1,0 +1,27 @@
+/* ========================================================================== */
+/* Section: Content: Double */
+/* ======================== */
+
+.ow-sctn.ow-sctn-ctnt-dbl {
+
+    &.ow-stc {
+        
+        .ow-wrap-subsctns,
+        .ow-col {
+            height: 100%;
+        }    
+        @media only screen and (max-width: 1023px) {
+            height: 100% !important;
+
+            .ow-col {
+                height: 75vh;
+            }
+        }  
+    }
+    @media only screen and (max-width: 1023px) {
+        
+        .ow-col {
+            width: 100% !important;
+        }
+    }
+}

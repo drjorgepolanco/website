@@ -1,0 +1,29 @@
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+        -ms-transform: rotate($deg);
+            transform: rotate($deg);
+}
+
+
+@mixin scale($size) {
+    -webkit-transform: scale($size); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+        -ms-transform: scale($size); /* IE 9 */
+            transform: scale($size); /* IE 10, Fx 16+, Op 12.1+ */ 
+}
+
+
+@mixin translate_x($value) {
+    -webkit-transform: translateX($value);
+        -ms-transform: translateX($value);
+            transform: translateX($value);
+}
+@mixin translate_y($value) {
+    -webkit-transform: translateY($value);
+        -ms-transform: translateY($value);
+            transform: translateY($value);
+}
+@mixin translate_xy($x, $y) {
+    -webkit-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+            transform: translate($x, $y);
+}

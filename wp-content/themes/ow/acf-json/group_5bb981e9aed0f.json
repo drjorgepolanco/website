@@ -1,0 +1,553 @@
+{
+    "key": "group_5bb981e9aed0f",
+    "title": "Sections",
+    "fields": [
+        {
+            "key": "field_5bb981f2d6f00__trashed",
+            "label": "Section",
+            "name": "section",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5bc0cede48198": {
+                    "key": "layout_5bc0cede48198",
+                    "name": "section_accns",
+                    "label": "Accordions",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bc0cef248199",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bc0cefb4819a",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bc0ce8cac6ec",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bbaf716d8623": {
+                    "key": "layout_5bbaf716d8623",
+                    "name": "section_clts",
+                    "label": "Callouts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bbaf727d8624",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bbaf730d8625",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bbaf63d159fc",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bba7cb65e169": {
+                    "key": "layout_5bba7cb65e169",
+                    "name": "section_ctnt_dbl",
+                    "label": "Content Double",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bba7cb65e16a",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bba7cb65e16b",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bba749db36a8",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5bb9821fa2de5": {
+                    "key": "5bb9821fa2de5",
+                    "name": "section_ctnt_sgl",
+                    "label": "Content Single",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bb98250d6f01",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bb98258d6f02",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bba714b54c75",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5be7b95612781": {
+                    "key": "layout_5be7b95612781",
+                    "name": "section_grid_image",
+                    "label": "Grid: Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5be7b96812782",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5be7b97112783",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5be7b919d1567",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": "",
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5be8b796c7624": {
+                    "key": "layout_5be8b796c7624",
+                    "name": "section_grid_media",
+                    "label": "Grid: Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5be8b7a0c7625",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5be8b7a6c7626",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5be8b75f5bada",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": "",
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bc1057494aed": {
+                    "key": "layout_5bc1057494aed",
+                    "name": "section_slider",
+                    "label": "Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bc1057b94aee",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bc1058394aef",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bc1050e91bc2",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bc129e6eb747": {
+                    "key": "layout_5bc129e6eb747",
+                    "name": "section_tabs",
+                    "label": "Tabs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bc129f0eb748",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bc129fbeb749",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bc128ad7df12",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bbeb85bda4d1": {
+                    "key": "layout_5bbeb85bda4d1",
+                    "name": "section_video",
+                    "label": "Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bbeb863da4d2",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bbeb86ada4d3",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "component_field",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "field_group_key": "group_5bbeb7a7cbee9",
+                            "repeatable": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "appearances": [
+                                "hide-outer-boundary",
+                                "hide-outer-label"
+                            ],
+                            "min": null,
+                            "max": null,
+                            "collapsed": "",
+                            "sub_fields": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Section",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "is_acf_component": 0,
+    "acf_component_defaults": {
+        "repeatable": "0",
+        "min": "",
+        "max": "",
+        "layout": "block",
+        "button_label": "",
+        "appearances": ""
+    },
+    "modified": 1541993354
+}
